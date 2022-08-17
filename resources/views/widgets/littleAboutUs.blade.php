@@ -6,19 +6,6 @@
                     <div class="about-img-holder bg-overlay">
                         <div class="bg-section"><img src="/images/about/1.jpg" alt="about Image"/></div>
                     </div>
-                    <div>
-{{--                        <!-- Start .counter-->--}}
-{{--                        <div class="counter">--}}
-{{--                            <div class="counter-icon"> <i class="flaticon-033-plug"></i></div>--}}
-{{--                            <div class="counter-num"> <span class="counting" data-counterup-nums="954">954</span>--}}
-{{--                                <p></p>--}}
-{{--                            </div>--}}
-{{--                            <div class="counter-name">--}}
-{{--                                <h6>happy clients</h6>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <!-- End .counter-->--}}
-                    </div>
                 </div>
             </div>
             <div class="col-12 col-lg-7">

@@ -1,6 +1,5 @@
 @include('widgets.header')
 
-
 <!--
       ============================
       PageTitle #11 Section

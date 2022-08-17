@@ -1,6 +1,5 @@
 @include('widgets.header')
 
-
 @include('widgets.members')
 
 @include('widgets.features')
