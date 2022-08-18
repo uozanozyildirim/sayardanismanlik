@@ -2,9 +2,10 @@
 
 namespace Tests\Unit;
 
+use App\Widget;
 use App\Menu;
-use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Facades\DB;
+use Tests\TestCase;
 
 
 class ExampleTest extends TestCase
@@ -21,9 +22,11 @@ class ExampleTest extends TestCase
 
     public function testGetMenus()
     {
-//        $menus = new Menu();
-//        $menuItems = $menus->getMenus();
-//        dump($menuItems);
+       $widgets =  DB::table('widgets')->get();
+       $jsonItems =   json_decode($widgets[0]->fields, true);
+
+       dump($jsonItems);
+
         $this->assertTrue(true);
 
     }
