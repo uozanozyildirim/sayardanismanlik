@@ -9,7 +9,6 @@ class Menu extends Model
 {
     protected $table = 'menus';
 
-
     public function getMenus()
     {
         DB::table($this->table)->get();

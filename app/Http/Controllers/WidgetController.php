@@ -13,6 +13,7 @@ class WidgetController extends BaseController
         $widget =  new Widget();
         $solResimSagYazi   = $widget->getWidgetByAlias('solResimSagYazi');
         $ikiUstYaziAltResim = $widget->getWidgetByAlias('ikiUstYaziAltResim');
+        $news = new News();
 
         return view('pages.homePage', compact('solResimSagYazi', 'ikiUstYaziAltResim'));
     }
