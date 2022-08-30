@@ -19,6 +19,17 @@ class News extends Model
        return  DB::table($this->table)->get();
     }
 
+
+    public function getNewsWithLimit($limit)
+    {
+       return  DB::table($this->table)
+           ->limit($limit)
+           ->get();
+    }
+
+
+
+
     public function getAllNewsWithEditorAndCategory()
     {
         return  DB::table('posts')
