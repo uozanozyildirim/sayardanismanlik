@@ -5,9 +5,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'WidgetController@HomepageWidgets');
 Route::get('/anasayfa', 'WidgetController@HomepageWidgets');
 Route::get('/hakkimizda', 'WidgetController@AboutPageWidgets');
-Route::view('/projeler', 'pages.projectsListPage');
-Route::view('/haber/{{slug}}', 'pages.blogDetailPage');
-Route::view('/haberler', 'pages.blogList');
+Route::get('/haberler', 'WidgetController@NewsPageWidgets');
+Route::get('/haber/{{slug}}', 'WidgetController@NewsDetailPageWidgets');
+//Route::view('/projeler', 'pages.projectsListPage');
+//Route::view('/haberler', 'pages.blogList');
 Route::view('/iletisim', 'pages.contactPage');
 
 
