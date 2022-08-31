@@ -23,7 +23,6 @@
 </div>
 <!-- Document Wrapper-->
 
-<div class="wrapper clearfix" id="wrapperParallax">
     <!--
     ============================
     Header #2
@@ -144,4 +143,3 @@
         </div><a class="module-cancel" href="#"><i class="fas fa-times"></i></a>
         <!-- End .module-cancel-->
     </div>
-</div>
