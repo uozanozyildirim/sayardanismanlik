@@ -1,13 +1,9 @@
 <section class="projects projects-grid" id="projects-grid-1">
-        <div class="heading heading-8">
-            <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <h2 class="heading-title">Latest Projects, Solutions And Energy Supplies</h2>
+        <div class="heading heading-8" >
+            <div style="margin-top: 75px; margin-bottom: 0;">
+                <div class="col-12">
+                    <h2 class="heading-title">Bizden Haberler</h2>
                 </div>
-                </div>
-            </div>
-            <div style="margin-top: 200px;">
                 <div class="carousel mt-5 owl-carousel" data-slide="4" data-slide-rs="1" data-center="data-center" data-autoplay="true" data-nav="true" data-dots="true" data-space="30" data-loop="true" data-speed="800">
                     @foreach($haberSlider as $row)
                         <div>
@@ -30,9 +26,6 @@
 
                 </div>
             </div>
-
-
-
         </div>
         <!-- End .row-->
     <!-- End .container-->

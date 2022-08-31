@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\FeaturedImage;
 use App\News;
 use App\Widget;
 use Illuminate\Routing\Controller as BaseController;
@@ -12,18 +13,21 @@ class WidgetController extends BaseController
 
     public function HomepageWidgets()
     {
-        $widget =  new Widget();
+        $widget = new Widget();
         $news = new News();
-        $solResimSagYazi   = $widget->getWidgetByAlias('solResimSagYazi');
-        $ikiUstYaziAltResim = $widget->getWidgetByAlias('ikiUstYaziAltResim');
-        $haberSlider = $news->getNewsWithLimit(3);
+        $featuredImage = new FeaturedImage();
 
-        return view('pages.homePage', compact('solResimSagYazi', 'ikiUstYaziAltResim', 'haberSlider'));
+        $haberSlider = $news->getNewsWithLimit(3);
+        $spotlightItems = $featuredImage->getFeaturedImages();
+        $ikiUstYaziAltResim = $widget->getWidgetByAlias('ikiUstYaziAltResim');
+        $solResimSagYazi = $widget->getWidgetByAlias('solResimSagYazi');
+
+        return view('pages.homePage', compact('solResimSagYazi', 'spotlightItems', 'ikiUstYaziAltResim', 'haberSlider'));
     }
 
     public function AboutPageWidgets()
     {
-        $widget =  new Widget();
+        $widget = new Widget();
         $news = new News();
 
         $ikiUstYaziAltResim = $widget->getWidgetByAlias('ikiUstYaziAltResim');
@@ -37,7 +41,7 @@ class WidgetController extends BaseController
 
     public function NewsPageWidgets()
     {
-        $widget =  new News();
+        $widget = new News();
         $tumHaberler = $widget->getAllNewsWithEditorAndCategory();
         $haberSlider = $widget->getNewsWithLimit(3);
 
@@ -46,9 +50,15 @@ class WidgetController extends BaseController
 
     public function NewsDetailPageWidgets($slug)
     {
-        $widget =  new News();
-        $tumHaberler = $widget->getNewsBySlug($slug);
-        return view('pages.blogDetailPage', compact('tumHaberler'));
+        if ($slug) {
+            $widget = new News();
+            $haberDetay = $widget->getNewsBySlug($slug);
+            return view('pages.blogDetailPage', compact('haberDetay'));
+
+        } else {
+            return view('pages.homePage');
+        }
+
     }
 
 

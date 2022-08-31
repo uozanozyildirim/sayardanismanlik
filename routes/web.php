@@ -6,9 +6,7 @@ Route::get('/', 'WidgetController@HomepageWidgets');
 Route::get('/anasayfa', 'WidgetController@HomepageWidgets');
 Route::get('/hakkimizda', 'WidgetController@AboutPageWidgets');
 Route::get('/haberler', 'WidgetController@NewsPageWidgets');
-Route::get('/haber/{{slug}}', 'WidgetController@NewsDetailPageWidgets');
-//Route::view('/projeler', 'pages.projectsListPage');
-//Route::view('/haberler', 'pages.blogList');
+Route::get('/haber/{slug}', 'WidgetController@NewsDetailPageWidgets');
 Route::view('/iletisim', 'pages.contactPage');
 
 

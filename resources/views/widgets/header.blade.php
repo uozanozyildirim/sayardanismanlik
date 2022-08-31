@@ -71,11 +71,6 @@
                 <div class="module module-search">
                     <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>
                 </div>
-                <div class="module module-cart">
-                    <div class="module-icon module-icon-cart"><i class="fas fa-shopping-cart"></i><span class="title">shop cart</span>
-                        <label class="module-label">2</label>
-                    </div>
-                </div>
                 <div class="module module-language">
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
@@ -109,7 +104,7 @@
                     @endphp
 
                     @foreach($menus as $menu)
-                    <li class="nav-item" id="contact" data-hover=""><a href="{{Str::slug($menu) }}"><span>{{ $menu }}</span></a></li>
+                    <li class="nav-item" id="contact" data-hover=""><a href="/{{Str::slug($menu) }}"><span>{{ $menu }}</span></a></li>
                     @endforeach
                 </ul>
                 <div class="module-holder">

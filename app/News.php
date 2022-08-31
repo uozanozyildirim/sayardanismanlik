@@ -19,7 +19,6 @@ class News extends Model
        return  DB::table($this->table)->get();
     }
 
-
     public function getNewsWithLimit($limit)
     {
        return  DB::table($this->table)
@@ -29,8 +28,6 @@ class News extends Model
            ->select('posts.*', 'categories.name as category_title', 'users.name as author_name', 'users.avatar as author_avatar', 'categories.slug as category_slug' )
            ->get();
     }
-
-
 
 
     public function getAllNewsWithEditorAndCategory()
@@ -55,11 +52,12 @@ class News extends Model
     public function getNewsBySlug($slug)
     {
         return  DB::table($this->table)
+            ->where('posts.slug', '=', $slug)
             ->join($this->categoryTable, 'categories.id', '=', 'posts.category_id')
             ->join($this->userTable, 'users.id', '=', 'posts.author_id')
             ->select('posts.*', 'categories.name as category_title', 'users.name as author_name', 'users.avatar as author_avatar', 'categories.slug as category_slug' )
-            ->where('posts.slug', '=', $slug)
-            ->get();
+            ->first();
+
     }
 
 }
