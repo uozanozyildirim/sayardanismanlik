@@ -24,6 +24,9 @@ class News extends Model
     {
        return  DB::table($this->table)
            ->limit($limit)
+           ->join($this->categoryTable, 'categories.id', '=', 'posts.category_id')
+           ->join($this->userTable, 'users.id', '=', 'posts.author_id')
+           ->select('posts.*', 'categories.name as category_title', 'users.name as author_name', 'users.avatar as author_avatar', 'categories.slug as category_slug' )
            ->get();
     }
 

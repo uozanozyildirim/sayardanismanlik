@@ -1,45 +1,45 @@
-<section class="projects projects-modern projects-modern-1" id="projects-modern-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6 offset-lg-3">
-                <div class="heading heading-5 text-center">
-                    <p class="heading-subtitle">Inavasyon, Kalite ve Sürekli Gelişim</p>
-                    <h2 class="heading-title">Bizden Haberler</h2>
+<section class="projects projects-grid" id="projects-grid-1">
+        <div class="heading heading-8">
+            <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2 class="heading-title">Latest Projects, Solutions And Energy Supplies</h2>
+                </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12">
-            <div class="row">
-                @foreach($haberSlider as $tmp)
-                    <div class="col-lg-3">
-                        <div class="carousel owl-carousel carousel-dots" data-slide="{{ $loop->index }}"
-                             data-slide-rs="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="30"
-                             data-loop="true" data-speed="3000">
+            <div style="margin-top: 200px;">
+                <div class="carousel mt-5 owl-carousel" data-slide="4" data-slide-rs="1" data-center="data-center" data-autoplay="true" data-nav="true" data-dots="true" data-space="30" data-loop="true" data-speed="800">
+                    @foreach($haberSlider as $row)
+                        <div>
                             <div class="project-panel" data-hover="">
                                 <div class="project-panel-holder">
-                                    <div class="project-img"><a class="link" href="/haber/{{ $tmp->slug  }}"></a><img src="/storage/{{ $tmp->image }}"
-                                            alt="/haber/{{ $tmp->slug  }}"/></div>
+                                    <div class="project-img"><a class="link" href="/haber/{{ $row->slug }}"></a><img style="width: 100%; height: 200px;" src="/storage/{{ $row->image  }}" alt="{{ $row->slug }}"/></div>
+                                    <!-- End .project-img-->
                                     <div class="project-content">
-{{--                                        <div class="project-cat"></div>--}}
                                         <div class="project-title">
-                                            <h4><a href="/haber/{{ $tmp->slug }}">{{ $tmp->title }}
-                                                </a></h4>
+                                            <h4><a href="/haber/{{ $row->slug }}">{{ $row->title }}</a></h4>
                                         </div>
-                                        <div class="project-desc">
-                                            <p> {{ $tmp->excerpt  }} </p>
-                                        </div>
-                                        <div class="project-more"><a class="btn btn--bordered btn--white"
-                                        href="/haber/{{ $tmp->slug  }}">Daha Fazla<i class="energia-arrow-right"></i></a>
+                                        <div class="project-cat"><a href="/haber/{{ $row->slug }}">{{ $row->category_title }}</a>
                                         </div>
                                     </div>
+                                    <!-- End .project-content -->
                                 </div>
                             </div>
                         </div>
-                        <div>
-                        </div>
-                    </div>
-                @endforeach
+                    @endforeach
+
+                </div>
             </div>
+
+
+
         </div>
-    </div>
+        <!-- End .row-->
+    <!-- End .container-->
+    <!-- End .carousel-->
+
+    <!-- End .container-->
 </section>
+
+
+
