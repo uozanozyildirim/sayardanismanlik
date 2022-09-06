@@ -38,7 +38,7 @@
                     </div>
                     <div class="contact-infos"><i class="energia-email--icon"></i>
                         <div class="contact-body">
-                            <p>email: <a href="mailto:{{setting('admin.email')}}">{{ setting('admin.email') }}</a></p>
+                            <p>Email: <a href="mailto:{{setting('admin.email')}}">{{ setting('admin.email') }}</a></p>
                         </div>
                     </div>
                     @if(setting('admin.work_hours'))
@@ -55,7 +55,7 @@
                 <!-- Start .social-links-->
                 <div class="social-links"><a class="share-facebook" href="/{{setting('admin.facebook')}}"><i class="energia-facebook"></i></a><a class="share-instagram" href="/{{setting('admin.instagram')}}"><i class="energia-twitter"></i></a><a class="share-twitter" href="/{{setting('admin.youtube')}}"><i class="energia-youtube"></i></a></div>
                 <!-- End .social-links-->
-                <div class="topbar-links"><a href="/haberler">Haberler</a><a href="/hakkimizda">Kariyer</a><a href="/hakkimizda">SSS</a></div>
+                <div class="topbar-links"><a href="/haberler">Haberler</a></div>
                 <div class="module module-language">
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
