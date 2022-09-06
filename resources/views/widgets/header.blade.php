@@ -41,11 +41,14 @@
                             <p>email: <a href="mailto:{{setting('admin.email')}}">{{ setting('admin.email') }}</a></p>
                         </div>
                     </div>
+                    @if(setting('admin.work_hours'))
                     <div class="contact-infos"><i class="energia-clock-Icon"></i>
                         <div class="contact-body">
+
                             <p>Çalışma Saatleri : {{ setting('admin.work_hours') }}</p>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
             <div class="block-right">
