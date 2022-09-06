@@ -4,6 +4,7 @@
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-2">
                     <div class="footer-widget widget-links">
+{{--                        @foreach($footerMenuItems as $item)--}}
                         <div class="footer-widget-title">
                             <h5>Kurumsal</h5>
                         </div>
@@ -16,6 +17,7 @@
                                 <li><a href="page-contact.html">İletişim</a></li>
                             </ul>
                         </div>
+{{--                        @endforeach--}}
                     </div>
                 </div>
                 <!--  End .col-lg-2-->
@@ -54,10 +56,10 @@
                     <div class="footer-widget widget-contact">
                         <div class="widget-content">
                             <ul>
-                                <li class="phone">+90<a href="tel:+01061245741"> 538 629 31 41</a></li>
-                                <li class="email">Email: <a href="mailto:info@svoldanismanlik.com">info@svoldanismanlik.com</a></li>
+                                <li class="phone"><a href="tel:{{ setting('admin.phone_number') }}">{{ setting('admin.phone_number') }}</a></li>
+                                <li class="email">Email: <a href="mailto:{{setting('admin.email')}}">{{setting('admin.email')}}</a></li>
                                 <li class="address">
-                                    <p>Millet Caddesi, Serdivan - Sakarya</p>
+                                    <p>{{setting('admin.address')}}</p>
                                 </li>
                                 <li class="directions"><a href="/contact"><i class="energia-location-Icon"></i>Konum Bilgisi</a></li>
                             </ul>
@@ -78,11 +80,11 @@
                     <div class="footer-copyright">
                         <div class="copyright"><span>&copy; 2022 Svol Danışmanlık. Tüm Hakları Saklıdır </span>
                             <ul class="list-unstyled social-icons">
-                                <li><a class="share-facebook" href="javascript:void(0)"><i class="energia-facebook"></i>facebook
+                                <li><a class="share-facebook" href="{{setting('admin.facebook')}}"><i class="energia-facebook"></i>facebook
                                     </a></li>
-                                <li><a class="share-twitter" href="javascript:void(0)"><i class="energia-twitter"></i>twitter</a>
+                                <li><a class="share-twitter" href="{{setting('admin.twitter')}}"><i class="energia-twitter"></i>twitter</a>
                                 </li>
-                                <li><a class="share-youtube" href="javascript:void(0)"><i class="energia-youtube"></i>youtube</a>
+                                <li><a class="share-youtube" href="{{setting("admin.youtube")}}"><i class="energia-youtube"></i>youtube</a>
                                 </li>
                             </ul>
                         </div>

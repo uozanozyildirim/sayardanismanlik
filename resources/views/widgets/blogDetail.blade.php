@@ -1,10 +1,6 @@
 @include('widgets.header')
 
-<!--
-      ============================
-      PageTitle #11 Section
-      ============================
-      -->
+
 <section class="page-title page-title-11" id="page-title">
     <div class="page-title-wrap bg-overlay bg-overlay-dark-3">
         <div class="bg-section"><img src="assets/images/page-titles/17.jpg" alt="Background"/></div>

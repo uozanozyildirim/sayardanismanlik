@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="author" content="Ozb Digital"/>
+    <meta name="author" content="Svol Danışmanlık"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content="Multi-purpose energy html5 template"/>
-    <title>Svol Danışmanlık</title>
-    <link href="/images/favicon/favicon.png" rel="icon"/>
+    <title>{{setting('admin.site_title')}}</title>
+    <link href="/storage/{{ setting('admin.site_favicon')  }}" rel="icon"/>
     <!--  Fonts ==
     -->
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -22,7 +22,6 @@
     <div class="dual-ring"></div>
 </div>
 <!-- Document Wrapper-->
-
     <!--
     ============================
     Header #2
@@ -34,26 +33,26 @@
                 <div class="top-contact">
                     <div class="contact-infos"><i class="energia-phone-Icon"></i>
                         <div class="contact-body">
-                            <p>phone: <a href="tel:123-456-7890">+90 538 629 31 41</a></p>
+                            <p>İletişim Hattı: <a href="tel:{{ setting('admin.phone_number') }}">{{ setting('admin.phone_number')  }}</a></p>
                         </div>
                     </div>
                     <div class="contact-infos"><i class="energia-email--icon"></i>
                         <div class="contact-body">
-                            <p>email: <a href="mailto:info@svoldanismanlik.com">info@svoldanismanlik.com</a></p>
+                            <p>email: <a href="mailto:{{setting('admin.email')}}">{{ setting('admin.email') }}</a></p>
                         </div>
                     </div>
                     <div class="contact-infos"><i class="energia-clock-Icon"></i>
                         <div class="contact-body">
-                            <p>Çalışma Saatleri : Pazartesi - Cuma: 9.00 – 18.00</p>
+                            <p>Çalışma Saatleri : {{ setting('admin.work_hours') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="block-right">
                 <!-- Start .social-links-->
-                <div class="social-links"><a class="share-facebook" href="javascript:void(0)"><i class="energia-facebook"></i></a><a class="share-instagram" href="javascript:void(0)"><i class="energia-twitter"></i></a><a class="share-twitter" href="javascript:void(0)"><i class="energia-youtube"></i></a></div>
+                <div class="social-links"><a class="share-facebook" href="/{{setting('admin.facebook')}}"><i class="energia-facebook"></i></a><a class="share-instagram" href="/{{setting('admin.instagram')}}"><i class="energia-twitter"></i></a><a class="share-twitter" href="/{{setting('admin.youtube')}}"><i class="energia-youtube"></i></a></div>
                 <!-- End .social-links-->
-                <div class="topbar-links"><a href="blog-grid.html">Haberler & Galeri</a><a href="page-careers.html">Kariyer</a><a href="page-faqs.html">SSS</a></div>
+                <div class="topbar-links"><a href="#">Haberler & Galeri</a><a href="#">Kariyer</a><a href="#">SSS</a></div>
                 <div class="module module-language">
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
@@ -65,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="index.html"><img class="logo logo-dark" src="/images/logo/svol-cevre-danismanlik-logo.png" alt="Sayar Cevre Danismanlik Logo"/><img class="logo logo-mobile" src="/images/logo/sayar-cevre-danismanlik-logo.png" alt="Sayar Cevre Danismanlik Logo"/></a>
+        <nav class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="/"><img class="logo logo-dark" src="/storage/{{setting("admin.site_logo")}}" alt="Sayar Cevre Danismanlik Logo"/><img class="logo logo-mobile" src="/storage/{{setting('admin.site_logo')}}" alt="Svol Danismanlik"/></a>
             <div class="module-holder module-holder-phone">
                 <div class="module module-search">
                     <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>
@@ -98,12 +97,9 @@
 {{--                            <li class="nav-item"><a href="blog-single.html"><span>single blog post</span></a></li>--}}
 {{--                        </ul>--}}
 {{--                    </li>--}}
-                    @php
-                    $menus = ['Anasayfa', 'Hakkımızda','Haberler', 'İletişim']
-                    @endphp
 
-                    @foreach($menus as $menu)
-                    <li class="nav-item" id="contact" data-hover=""><a href="/{{Str::slug($menu) }}"><span>{{ $menu }}</span></a></li>
+                    @foreach($mainMenuItems as $item)
+                    <li class="nav-item" id="contact" data-hover=""><a href="{{ $item->url  }}"><span>{{ $item->title }}</span></a></li>
                     @endforeach
                 </ul>
                 <div class="module-holder">

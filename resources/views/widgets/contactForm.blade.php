@@ -5,32 +5,12 @@
             <div class="heading heading-light heading-6">
                 <p class="heading-subtitle">Güneş panellerinizin performasını arttırın!</p>
                 <h2 class="heading-title">Güneş Panelleri ile özgürlüğün tadını çıkarın</h2>
-{{--                <p class="heading-desc">We offer products, solutions, and services across the entire energy value chain.--}}
-{{--                    We support our customers on their way to a more sustainable future – no matter how far along the--}}
-{{--                    journey to energize society with affordable energy systems.</p>--}}
-                <div class="advantages-list-holder">
-                    <div class="row">   
-                        <div class="col-12 col-lg-6">
-{{--                            <ul class="list-unstyled advantages-list advantages-list-2">--}}
-{{--                                <li>Reliabe and performance</li>--}}
-{{--                                <li>Solar material financing</li>--}}
-{{--                                <li>In-time manufacturing</li>--}}
-{{--                            </ul>--}}
-                        </div>
-                        <div class="col-12 col-lg-6">l
-{{--                            <ul class="list-unstyled advantages-list advantages-list-2">--}}
-{{--                                <li>50% more energy output</li>--}}
-{{--                                <li>Built using ntype mono</li>--}}
-{{--                            </ul>--}}
-                        </div>
-                    </div>
-                </div>
                 <div class="contact-action"><a class="btn btn--white" href="page-about.html">Daha Fazlası İçin<i
                             class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
                                                                    href="page-faqs.html">Değerlerimiz</a></div>
                 <div class="contact-quote"><img src="/images/icons/noteicon.png" alt="icon"/>
                     <p>Formu doldurun, aynı gün teklif alın! <a
-                            href="tel:01061245741">Tel: <br>+90 538 629 31 41</a></p>
+                            href="tel:{{ setting('admin.phone_number') }}">Tel: <br>{{ setting('admin.phone_number') }}</a></p>
                 </div>
             </div>
             <div class="contact-card">
@@ -54,32 +34,6 @@
                                     <option value="AK">12:24 months</option>
                                 </select>
                             </div>
-{{--                            <div class="col-12 col-md-6">--}}
-{{--                                <label class="form-label" for="contact-usage">Monthly electric usage in kWh?</label>--}}
-{{--                                <input class="form-control" type="text" id="contact-usage" name="contact-usage"--}}
-{{--                                       placeholder="1254 KWH" required=""/>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-12 col-md-6">--}}
-{{--                                <label class="form-label" for="select-3">Solar system type?</label>--}}
-{{--                                <select class="form-control" id="select-3">--}}
-{{--                                    <option value="default">OffGrid</option>--}}
-{{--                                    <option value="AL">OnGrid</option>--}}
-{{--                                </select>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-12 col-md-6">--}}
-{{--                                <label class="form-label" for="select-4">Solar panels place?</label>--}}
-{{--                                <select class="form-control" id="select-4">--}}
-{{--                                    <option value="default">huge farm</option>--}}
-{{--                                    <option value="AL">small farm</option>--}}
-{{--                                </select>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-12 col-md-6">--}}
-{{--                                <label class="form-label" for="select-5">Materials on your roof?</label>--}}
-{{--                                <select class="form-control" id="select-5">--}}
-{{--                                    <option value="default">comp shingle</option>--}}
-{{--                                    <option value="AL">roof shingle</option>--}}
-{{--                                </select>--}}
-{{--                            </div>--}}
                             <div class="col-12">
                                 <label class="form-label">İletişim kanalı seçimi:</label>
                                 <div class="custom-radio-group" id="custom-radio-group">

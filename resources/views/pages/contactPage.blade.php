@@ -4,7 +4,7 @@
 
 @include('widgets.contactTestimonial')
 
-{{--@include('widgets.contactForm')--}}
+{{--@include('widgets.contactForm')--}} 
 
 @include('widgets.footer')
 

@@ -7,7 +7,7 @@ Route::get('/anasayfa', 'WidgetController@HomepageWidgets');
 Route::get('/hakkimizda', 'WidgetController@AboutPageWidgets');
 Route::get('/haberler', 'WidgetController@NewsPageWidgets');
 Route::get('/haber/{slug}', 'WidgetController@NewsDetailPageWidgets');
-Route::view('/iletisim', 'pages.contactPage');
+Route::get('/iletisim', 'WidgetController@ContactpageWidgets');
 
 
 Route::group(['prefix' => 'admin'], function () {
