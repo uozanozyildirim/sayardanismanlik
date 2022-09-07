@@ -7,7 +7,7 @@
     box-shadow: 0px 5px 41.5px rgba(40, 40, 40, 0.11);
 
     @media #{$minLarge} {
-        height: 100px;
+        height: 130px;
     }
 
     .navbar-brand {
@@ -20,7 +20,7 @@
         }
 
         @media #{$minLarge} {
-            height     : 100px;
+            height     : 130px;
             display    : flex;
             align-items: center;
         }
@@ -98,7 +98,7 @@
     }
 
     &.header-topbar {
-        height: 150px;
+        height: 85px;
 
         @media #{$maxTablet} {
             height: 80px;

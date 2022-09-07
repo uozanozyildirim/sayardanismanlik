@@ -26,12 +26,12 @@
                                     <option value="default">Hizmet Almak istediğiniz konu?</option>
                                     <option value="s1">Çevre - Atık Yönetimi</option>
                                     <option value="s2">Kalite Sistemleri</option>
+                                    <option value="s3">Kimyasalların Kaydı - GBT</option>
                                     <option value="s4">Sosyal Uygunluk Danışmanlığı</option>
                                     <option value="s5">Enerji Yönetimi</option>
                                     <option value="s6">İş Güvenliği</option>
                                     <option value="s7">Eğitim</option>
                                     <option value="s8">Karbon Ayak İzi</option>
-                                    <option value="s3">Kimyasalların Kaydı - GBT</option>
                                 </select>
                             </div>
                             <div class="col-12">

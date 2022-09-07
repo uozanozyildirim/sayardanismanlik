@@ -7,20 +7,22 @@
                     <div class="img-card img-card-2 bg-overlay bg-overlay-theme">
                         <div class="bg-section"><img src="assets/images/contact/2.jpg" alt="image"/></div>
                         <div class="card-content">
-                            <div class="content-top">
-                                <h4 style="color: white;">Sürdürülebilirlik konusunda mevzuatlara uygun size özel bir çözüm üretelim!</h4>
+                            <div class="content-top">x
+                                <h3 style="color: white; font-size: 35px;">Sürdürülebilirlik konusunda mevzuatlara uygun size özel bir çözüm üretelim!</h3>
                             </div>
                             <div class="content-bottom">
                                 <ul class="list-unstyled contact-infos">
                                     <li class="contact-info"><i class="energia-phone-Icon"></i>
-                                        <p>İletişim Hattı: <a href="tel:123-456-7890">{{ setting('admin.phone_number') }}</a></p>
+                                        <p>İletişim Hattı: <a href="tel:{{ setting('admin.phone_number') }}">{{ setting('admin.phone_number') }}</a></p>
                                     </li>
                                     <li class="contact-info"><i class="energia-location-Icon"></i>
-                                        <p>Lokasyon: <a href="mailto:info@sayardanismanlik.com"> Sakarya, Sakarya</a></p>
+                                        <p>Lokasyon: <a href="mailto:{{ setting('admin.email') }}">{{ setting('admin.address') }}</a></p>
                                     </li>
+                                    @if(empty(setting('admin.phone_number')) === 0)
                                     <li class="contact-info"><i class="energia-clock-Icon"></i>
-                                        <p>Pazartesi - Cuma: 09.00 - 18.00</p>
+                                        <p>{{ setting('admin.work_hours') }}</p>
                                     </li>
+                                    @endif
                                 </ul><a class="btn btn--white" href="/hakkimizda">Hakkımızda<i class="energia-arrow-right"></i></a>
                             </div>
                         </div>
