@@ -3,14 +3,14 @@
     <div class="container">
         <div class="contact-panel contact-panel-3">
             <div class="heading heading-light heading-6">
-                <p class="heading-subtitle">Güneş panellerinizin performasını arttırın!</p>
-                <h2 class="heading-title">Güneş Panelleri ile özgürlüğün tadını çıkarın</h2>
-                <div class="contact-action"><a class="btn btn--white" href="page-about.html">Daha Fazlası İçin<i
+                <p class="heading-subtitle">Svol Danışmanlık</p>
+                <h2 class="heading-title">Sürdürülebilirlik konusunda mevzuatlara uygun size özel bir çözüm üretelim!</h2>
+                <div class="contact-action"><a class="btn btn--white" href="/hizmetlerimiz">Daha Fazlası İçin<i
                             class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
-                                                                   href="page-faqs.html">Değerlerimiz</a></div>
+                                                                   href="/hakkimizda">Değerlerimiz</a></div>
                 <div class="contact-quote"><img src="/images/icons/noteicon.png" alt="icon"/>
                     <p>Formu doldurun, aynı gün teklif alın! <a
-                            href="tel:{{ setting('admin.phone_number') }}">Tel: <br>{{ setting('admin.phone_number') }}</a></p>
+                            href="tel:{{ setting('admin.phone_number') }}"><br>{{ setting('admin.phone_number') }}</a></p>
                 </div>
             </div>
             <div class="contact-card">
@@ -19,19 +19,19 @@
                     <p class="card-desc">Formu doldurun, aynı gün teklif alın! </p>
                     <form class="contactForm" method="post" action="/php/contact.php">
                         <div class="row">
-                            <div class="col-12 col-md-6">
-                                <label class="form-label" for="select-1">Hangi konuda yardım almak istiyorsunuz?</label>
-                                <select class="form-control" id="select-1">
-                                    <option value="default">Mevzuat</option>
-                                    <option value="AL">foreign contractor</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label class="form-label" for="select-2">Bütçeniz?</label>
+
+                            <div class="col-12 col-md-12">
+                                <label class="form-label" for="select-2">Size nasıl yardımcı olabiliriz?</label>
                                 <select class="form-control" id="select-2">
-                                    <option value="default">5.000-10.000 TL</option>
-                                    <option value="AL">6:12 months</option>
-                                    <option value="AK">12:24 months</option>
+                                    <option value="default">Hizmet Almak istediğiniz konu?</option>
+                                    <option value="s1">Çevre - Atık Yönetimi</option>
+                                    <option value="s2">Kalite Sistemleri</option>
+                                    <option value="s4">Sosyal Uygunluk Danışmanlığı</option>
+                                    <option value="s5">Enerji Yönetimi</option>
+                                    <option value="s6">İş Güvenliği</option>
+                                    <option value="s7">Eğitim</option>
+                                    <option value="s8">Karbon Ayak İzi</option>
+                                    <option value="s3">Kimyasalların Kaydı - GBT</option>
                                 </select>
                             </div>
                             <div class="col-12">
