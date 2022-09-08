@@ -7,6 +7,7 @@ Route::get('/anasayfa', 'WidgetController@HomepageWidgets');
 Route::get('/hakkimizda', 'WidgetController@AboutPageWidgets');
 Route::get('/haberler', 'WidgetController@NewsPageWidgets');
 Route::get('/haber/{slug}', 'WidgetController@NewsDetailPageWidgets');
+Route::get('/hizmetler', 'ServicesPageWidgets@NewsDetailPageWidgets');
 Route::get('/iletisim', 'WidgetController@ContactpageWidgets');
 
 

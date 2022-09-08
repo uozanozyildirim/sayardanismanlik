@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\FeaturedImage;
 use App\Menu;
 use App\News;
+use App\Service;
 use App\Widget;
 use Illuminate\Routing\Controller as BaseController;
 use TCG\Voyager\Models\Post;
@@ -22,12 +23,13 @@ class WidgetController extends BaseController
         $haberSlider = $news->getNewsWithLimit(3);
         $spotlightItems = $featuredImage->getFeaturedImages();
         $mainMenuItems = $menus->getMenusByName('main_menu');
-        $footerMenuItems = $menus->getMenusByName('footer_menu');
+        $footerMainItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
         $ikiUstYaziAltResim = $widget->getWidgetByAlias('ikiUstYaziAltResim');
         $solResimSagYazi = $widget->getWidgetByAlias('solResimSagYazi');
 
 
-        return view('pages.homePage', compact('solResimSagYazi', 'spotlightItems', 'ikiUstYaziAltResim','footerMenuItems','mainMenuItems' ,'haberSlider'));
+        return view('pages.homePage', compact('solResimSagYazi', 'spotlightItems', 'ikiUstYaziAltResim','footerSubMenuItems', 'footerMainItems','mainMenuItems' ,'haberSlider'));
     }
 
     public function AboutPageWidgets()
@@ -37,13 +39,14 @@ class WidgetController extends BaseController
         $menus = new Menu();
 
         $mainMenuItems = $menus->getMenusByName('main_menu');
-        $footerMenuItems = $menus->getMenusByName('footer_menu');
+        $footerMainItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
         $ikiUstYaziAltResim = $widget->getWidgetByAlias('ikiUstYaziAltResim');
         $ikiResimIkiYazi = $widget->getWidgetByAlias('ikiResimIkiYazi');
         $haberSlider = $news->getNewsWithLimit(3);
 
 
-        return view('pages.aboutUsPage', compact('ikiResimIkiYazi','footerMenuItems','mainMenuItems','ikiUstYaziAltResim', 'haberSlider'));
+        return view('pages.aboutUsPage', compact('ikiResimIkiYazi','footerSubMenuItems' , 'footerMainItems' , 'mainMenuItems' ,'ikiUstYaziAltResim', 'haberSlider'));
 
     }
 
@@ -72,12 +75,14 @@ class WidgetController extends BaseController
 
 
         $mainMenuItems = $menus->getMenusByName('main_menu');
-        $footerMenuItems = $menus->getMenusByName('footer_menu');
+        $footerMainItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
+
 
         if ($slug) {
             $widget = new News();
             $haberDetay = $widget->getNewsBySlug($slug);
-            return view('pages.blogDetailPage', compact('haberDetay', 'footerMenuItems','footerMenuItems'));
+            return view('pages.blogDetailPage', compact('haberDetay', 'footerMainItems','footerSubMenuItems', 'mainMenuItems'));
 
         } else {
             return view('pages.homePage');
@@ -90,9 +95,22 @@ class WidgetController extends BaseController
         $menus = new Menu();
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
-        $footerSubMenuItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
 
         return view('pages.contactPage', compact('footerMainItems','mainMenuItems','footerSubMenuItems'));
+    }
+
+    public function ServicesPageWidgets()
+    {
+        $menus = new Menu();
+        $mServices = new Service();
+
+        $services =  $mServices->getServices(10);
+        $mainMenuItems = $menus->getMenusByName('main_menu');
+        $footerMainItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
+
+        return view('pages.contactPage', compact('footerMainItems', 'services','mainMenuItems','footerSubMenuItems'));
     }
 
 }

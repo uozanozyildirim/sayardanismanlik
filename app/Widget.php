@@ -16,7 +16,6 @@ class Widget extends Model
         DB::table('widgets')->get();
     }
 
-
     public function getWidgetByAlias($alias)
     {
         $widgets    =  DB::table('widgets')->where('alias', $alias)->first();
