@@ -90,6 +90,28 @@ class WidgetController extends BaseController
 
     }
 
+    public function ServiceDetailPageWidgets($slug)
+    {
+
+        $menus = new Menu();
+
+
+        $mainMenuItems = $menus->getMenusByName('main_menu');
+        $footerMainItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
+
+
+        if ($slug) {
+            $widget = new Service();
+            $haberDetay = $widget->getServiceBySlug($slug);
+            return view('pages.serviceDetailPage', compact('haberDetay', 'footerMainItems','footerSubMenuItems', 'mainMenuItems'));
+
+        } else {
+            return view('pages.homePage');
+        }
+
+    }
+
     public function ContactPageWidgets()
     {
         $menus = new Menu();
@@ -110,7 +132,20 @@ class WidgetController extends BaseController
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
         $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
 
-        return view('pages.contactPage', compact('footerMainItems', 'services','mainMenuItems','footerSubMenuItems'));
+        return view('pages.servicesPage', compact('footerMainItems', 'services','mainMenuItems','footerSubMenuItems'));
+    }
+
+    public function InformationPoolWidgets()
+    {
+        $menus = new Menu();
+
+        $mainMenuItems = $menus->getMenusByName('main_menu');
+        $footerMainItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
+
+
+
+        return view('pages.servicesPage', compact('footerMainItems','mainMenuItems','footerSubMenuItems'));
     }
 
 }
