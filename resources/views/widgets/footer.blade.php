@@ -56,7 +56,7 @@
                     <div class="footer-widget widget-contact">
                         <div class="widget-content">
                             <ul>
-                                <li class="phone"><a href="tel:{{ setting('admin.phone_number') }}">{{ setting('admin.phone_number') }}</a></li>
+                                <li class="phone"><a style="font-size: 24px;" href="tel:{{ setting('admin.phone_number') }}">{{ setting('admin.phone_number') }}</a></li>
                                 <li class="email">Email: <a href="mailto:{{setting('admin.email')}}">{{setting('admin.email')}}</a></li>
                                 <li class="address">
                                     <p>{{setting('admin.address')}}</p>

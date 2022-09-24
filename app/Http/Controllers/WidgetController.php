@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\FeaturedImage;
 use App\Menu;
 use App\News;
@@ -94,17 +95,18 @@ class WidgetController extends BaseController
     {
 
         $menus = new Menu();
+        $mCategories = new Category();
 
+        $categories = $mCategories->getCategories();
 
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
         $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
 
-
         if ($slug) {
             $widget = new Service();
             $haberDetay = $widget->getServiceBySlug($slug);
-            return view('pages.serviceDetailPage', compact('haberDetay', 'footerMainItems','footerSubMenuItems', 'mainMenuItems'));
+            return view('pages.serviceDetailPage', compact('haberDetay', 'footerMainItems', 'categories','footerSubMenuItems', 'mainMenuItems'));
 
         } else {
             return view('pages.homePage');

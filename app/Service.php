@@ -22,11 +22,13 @@ class Service extends Model
     }
 
 
+
+
     public function getServiceBySlug($slug)
     {
         return  DB::table($this->table)
             ->where('services.slug', '=', $slug)
-            ->join($this->categoryTable, 'categories.id', '=', 'services.category_id')
+            ->join($this->categoryTable, 'categories.id', '=', 'services.category')
             ->select('services.*', 'categories.name as category_title','categories.slug as category_slug' )
             ->first();
 
