@@ -21,4 +21,25 @@ class FrequentlyAskedQuestion extends Model
     }
 
 
+    public function getItemsByServiceSlug($slug)
+    {
+
+        $serviceId =
+            DB::table('services')
+                ->where('slug', '=', $slug)
+                ->select('id')
+                ->first();
+
+        $serviceId = $serviceId->id;
+
+
+        return
+            DB::table('frequently_asked_questions')
+            ->where('frequently_asked_questions.service_id', '=', $serviceId)
+            ->orderByDesc('id')
+            ->get();
+
+    }
+
+
 }

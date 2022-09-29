@@ -36,11 +36,11 @@
                 <div class="service-entry">
                     <div class="entry-content">
                         <div class="entry-introduction entry-infos">
-                            <h5 class="entry-heading"> {{$haberDetay->title}} </h5>
-                            <div>{{ strip_tags(html_entity_decode($haberDetay->content))  }}</div>
+                            <h5 class="entry-heading"> {{$serviceDetail->title}} </h5>
+                            <div>{{ strip_tags(html_entity_decode($serviceDetail->content))  }}</div>
                             <div class="row">
-                                <div class="col-12 p-2 col-md-6"><img width="100%" src="/storage/{{ $haberDetay->image }}" alt="image"/></div>
-{{--                                <div class="col-12 col-md-6"><img src="/storage/{{ $haberDetay->image }}" alt="image"/></div>--}}
+                                <div class="col-12 p-2 col-md-6"><img width="100%" src="/storage/{{ $serviceDetail->image }}" alt="image"/></div>
+{{--                                <div class="col-12 col-md-6"><img src="/storage/{{ $serviceDetail->image }}" alt="image"/></div>--}}
 {{--                                <div class="col-12 col-md-6"><img src="/images/services/single/2.jpg" alt="image"/></div>--}}
                             </div>
                         </div>
@@ -60,37 +60,25 @@
 {{--                            </div>--}}
 {{--                            <!-- End .video-->--}}
 {{--                        </div>--}}
+                        @if($frequentlyAskedQuestions)
                         <div class="entry-benefits entry-infos">
-                            <h5 class="entry-heading">key benefits</h5>
+                            <h5 class="entry-heading">Sık Sorulan Sorular</h5>
                             <div class="accordion accordion-2" id="accordion03">
                                 <div class="row">
+                                   @foreach($frequentlyAskedQuestions as $faq)
                                     <div class="col-12">
                                         <div class="card">
-                                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-1" href="#collapse01-1">Which Plan Is Right For Me?</a></div>
-                                            <div class="collapse" id="collapse01-1" data-bs-parent="#accordion03">
-                                                <div class="card-body">With any financial product that you buy, it is important that you know you are getting the best advice from a reputable company as often you will have to</div>
+                                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-{{ $faq->id }}" href="#collapse01-{{ $faq->id }}">{{ $faq->title }}</a></div>
+                                            <div class="collapse" id="collapse01-{{ $faq->id }}" data-bs-parent="#accordion03">
+                                                <div class="card-body">{{ $faq->content }}</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-2" href="#collapse01-2">Do I have to commit to a contract? </a></div>
-                                            <div class="collapse" id="collapse01-2" data-bs-parent="#accordion03">
-                                                <div class="card-body">With any financial product that you buy, it is important that you know you are getting the best advice from a reputable company as often you will have to</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="card active-acc">
-                                            <div class="card-heading"><a class="card-link  " data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-3" href="#collapse01-3">What Payment Methods Are Available? </a></div>
-                                            <div class="collapse show" id="collapse01-3" data-bs-parent="#accordion03">
-                                                <div class="card-body">With any financial product that you buy, it is important that you know you are getting the best advice from a reputable company as often you will have to</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
+                        @endif
                     </div>
                 </div>
                 <!-- End .service-entry-->

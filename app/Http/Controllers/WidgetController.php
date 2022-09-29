@@ -106,8 +106,12 @@ class WidgetController extends BaseController
 
         if ($slug) {
             $widget = new Service();
-            $haberDetay = $widget->getServiceBySlug($slug);
-            return view('pages.serviceDetailPage', compact('haberDetay', 'footerMainItems', 'categories','footerSubMenuItems', 'mainMenuItems'));
+            $faqs = new FrequentlyAskedQuestion();
+
+            $serviceDetail = $widget->getServiceBySlug($slug);
+            $frequentlyAskedQuestions = $faqs->getItemsByServiceSlug($slug);
+
+            return view('pages.serviceDetailPage', compact('serviceDetail', 'footerMainItems','frequentlyAskedQuestions', 'categories','footerSubMenuItems', 'mainMenuItems'));
 
         } else {
             return view('pages.homePage');
@@ -130,6 +134,7 @@ class WidgetController extends BaseController
         $menus = new Menu();
         $mServices = new Service();
 
+
         $services =  $mServices->getServices(10);
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
@@ -143,10 +148,10 @@ class WidgetController extends BaseController
         $menus = new Menu();
         $faqs = new FrequentlyAskedQuestion();
 
+        $frequentlyAskedQuestions = $faqs->getItems();
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
         $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
-        $frequentlyAskedQuestions = $faqs->getItems();
 
 
         return view('pages.informationPoolPage', compact('footerMainItems','mainMenuItems', 'frequentlyAskedQuestions','footerSubMenuItems'));
