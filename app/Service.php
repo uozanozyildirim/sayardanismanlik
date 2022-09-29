@@ -22,8 +22,6 @@ class Service extends Model
     }
 
 
-
-
     public function getServiceBySlug($slug)
     {
         return  DB::table($this->table)

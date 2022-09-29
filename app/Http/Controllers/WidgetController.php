@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\FeaturedImage;
+use App\FrequentlyAskedQuestion;
 use App\Menu;
 use App\News;
 use App\Service;
@@ -140,14 +141,15 @@ class WidgetController extends BaseController
     public function InformationPoolWidgets()
     {
         $menus = new Menu();
+        $faqs = new FrequentlyAskedQuestion();
 
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
         $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
+        $frequentlyAskedQuestions = $faqs->getItems();
 
 
-
-        return view('pages.servicesPage', compact('footerMainItems','mainMenuItems','footerSubMenuItems'));
+        return view('pages.informationPoolPage', compact('footerMainItems','mainMenuItems', 'frequentlyAskedQuestions','footerSubMenuItems'));
     }
 
 }
