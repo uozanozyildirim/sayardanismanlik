@@ -21,6 +21,16 @@
                     </div>
                     <!-- End .widget-services -->
                     <!-- Reservation-->
+                    <style>
+
+                        .widget{
+                            background-color: {{ $serviceDetail->color_code }};
+
+                        }
+
+
+                    </style>
+
                     <div class="widget widget-reservation"><img src="/images/blog/sidebar/reservation.jpg" alt="img"/>
                         <div class="widget-content"><i class="flaticon-040-green-energy"></i>
                             <p>Bize iletişim adreslerimden ulaşabilirsiniz </p><a class="btn btn--bordered btn--white" href="/iletisim">Lütfen Görüşme İçin Rezervasyon Yapınız</a><a href="tel:05355232114"><span class="energia-phone-Icon"></span>+90 535 523 21 14</a>

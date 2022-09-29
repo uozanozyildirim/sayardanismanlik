@@ -83,6 +83,23 @@
                     <div class="module module-search">
                         <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>
                     </div>
+
+                    @if($serviceDetail->color_code)
+
+                        <style>
+
+                            .btn--primary:before {
+                                background-color: {{ $serviceDetail->color_code }};
+                            }
+
+                            .module-contact .btn {
+                                background-color: {{ $serviceDetail->color_code }};
+                            }
+
+
+                        </style>
+
+                    @endif
                     <div class="module-contact"><a style="height: 130px;" class="btn btn--primary" href="/iletisim">İletişime Geç<i class="energia-arrow-right"></i></a></div>
                 </div>
                 <!--  End .module-holder-->
