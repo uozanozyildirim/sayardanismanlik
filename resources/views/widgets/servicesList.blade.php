@@ -11,7 +11,7 @@
                 </div>
                 <div class="about-block">
                     <div class="block-left">
-                        <p class="paragraph">{{ strip_tags(html_entity_decode($service->content)) }}</p>
+                        <p class="paragraph">{{ strip_tags(html_entity_decode($service->excerpt)) }}</p>
                         <div class="signature-block"><a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >Devamını Oku <i class="energia-arrow-right"></i></a>
                         </div>
                     </div>
@@ -57,9 +57,9 @@
                 </div>
                 <div class="about-block">
                     <div class="block-left">
-                        <p class="paragraph">{!!html_entity_decode($service->content)!!}</p>
-                        <div class="signature-block"><a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}">Devamını Oku <i class="energia-arrow-right"></i></a>
-                            </div>
+                        <p class="paragraph">{{ strip_tags(html_entity_decode($service->excerpt)) }}</p>
+                        <div class="signature-block"><a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >Devamını Oku <i class="energia-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
