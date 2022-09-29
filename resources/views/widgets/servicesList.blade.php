@@ -6,7 +6,7 @@
             <!--- Right Aligned Section  -->
             <div class="col-12 col-lg-6">
                 <div class="heading heading-12">
-                    <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{ $service->excerpt }}</p>
+                    <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{ $service->label }}</p>
                     <h2 class="heading-title">{{ $service->title }}</h2>
                 </div>
                 <div class="about-block">
@@ -52,7 +52,7 @@
             </div>
             <div class="col-12 col-lg-6">
                 <div class="heading heading-12">
-                    <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{ $service->excerpt }}</p>
+                    <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{ $service->label }}</p>
                     <h2 class="heading-title">{{ $service->title }}</h2>
                 </div>
                 <div class="about-block">
