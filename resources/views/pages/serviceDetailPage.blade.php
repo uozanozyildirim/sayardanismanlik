@@ -21,15 +21,7 @@
                     </div>
                     <!-- End .widget-services -->
                     <!-- Reservation-->
-                    <style>
 
-                        .widget{
-                            background-color: {{ $serviceDetail->color_code }};
-
-                        }
-
-
-                    </style>
 
                     <div class="widget widget-reservation"><img src="/images/blog/sidebar/reservation.jpg" alt="img"/>
                         <div class="widget-content"><i class="flaticon-040-green-energy"></i>
@@ -101,3 +93,44 @@
 </section>
 
 @include('widgets.footer')
+
+<style>
+
+    .widget{
+        background-color: {{ $serviceDetail->color_code }};
+
+    }
+
+
+</style>
+
+
+@if($serviceDetail->color_code)
+
+    <style>
+
+        .btn--primary:before {
+            background-color: {{ $serviceDetail->color_code }};
+        }
+
+        .module-contact .btn {
+            background-color: {{ $serviceDetail->color_code }};
+        }
+
+
+    </style>
+
+@endif
+
+@if($serviceDetail->color_code)
+
+    <style>
+
+
+        .back-top {
+            background-color: {{ $serviceDetail->color_code }};
+        }
+
+    </style>
+
+@endif
