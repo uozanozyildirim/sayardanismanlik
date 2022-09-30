@@ -12,9 +12,10 @@ function productImagePath($image_name)
 function translateToEnglish($text)
 {
 
-    $locale =  app()->getLocale();
 
-    if($locale = 'english')
+    $locale = \Illuminate\Support\Facades\Cookie::get('Language');
+
+    if($locale == 'En' & empty($text) == 0)
     {
     return  Stichoza\GoogleTranslate\GoogleTranslate::trans($text, 'en', 'tr');
     }

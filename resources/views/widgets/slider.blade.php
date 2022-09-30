@@ -10,9 +10,9 @@
                     <div class="row">
                         <div class="col-12 col-lg-7">
                             <div class="slide-content">
-                                <h2 class="slide-headline">{{ $spotlightItem->title }}</h2>
+                                <h2 class="slide-headline">{{ translateToEnglish($spotlightItem->title)  }}</h2>
                                 <p class="slide-desc">
-                                    {{ $spotlightItem->description }}</p>
+                                    {{ translateToEnglish($spotlightItem->description)  }}</p>
                              </div>
                         </div>
                     </div>

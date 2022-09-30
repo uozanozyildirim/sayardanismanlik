@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class LanguageController extends Controller
 {
@@ -10,10 +11,11 @@ class LanguageController extends Controller
 
 
         $language = $request['language'];
-
         app()->setLocale($language);
 
-        return 'language successfully changed';
+        Cookie::queue(cookie('Language', $language, '120'));
+
+        return 'Kullanıcı Diliniz '.$language. 'Olarak Değişti';
 
     }
 

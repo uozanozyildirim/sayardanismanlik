@@ -9,8 +9,6 @@
     <link href="/storage/{{ setting('admin.site_favicon')  }}" rel="icon"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
-    <link href="/css/vendor.min.css" rel="stylesheet"/>
-    <link href="/css/style.css" rel="stylesheet"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
@@ -24,7 +22,7 @@
                 <div class="top-contact">
                     <div class="contact-infos"><i class="energia-phone-Icon"></i>
                         <div class="contact-body">
-                            <p>İletişim Hattı: <a href="tel:{{ setting('admin.phone_number') }}">{{ setting('admin.phone_number')  }}</a></p>
+                            <p>{{ translateToEnglish('İletişim Hattı') }}: <a href="tel:{{ setting('admin.phone_number') }}">{{ setting('admin.phone_number')  }}</a></p>
                         </div>
                     </div>
                     <div class="contact-infos"><i class="energia-email--icon"></i>
@@ -46,7 +44,7 @@
                 <!-- Start .social-links-->
                 <div class="social-links"><a class="share-facebook" href="/{{setting('admin.facebook')}}"><i class="energia-facebook"></i></a><a class="share-instagram" href="/{{setting('admin.instagram')}}"><i class="energia-twitter"></i></a><a class="share-twitter" href="/{{setting('admin.youtube')}}"><i class="energia-youtube"></i></a></div>
                 <!-- End .social-links-->
-                <div class="topbar-links"><a href="/haberler">Haberler</a></div>
+                <div class="topbar-links"><a href="/haberler">{{ translateToEnglish('Haberler') }}</a></div>
                 <div class="module module-language">
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
@@ -77,7 +75,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto">
                     @foreach($mainMenuItems as $item)
-                    <li class="nav-item" id="contact" data-hover=""><a href="{{ $item->url  }}"><span>{{ $item->title }}</span></a></li>
+                    <li class="nav-item" id="contact" data-hover=""><a href="{{ $item->url  }}"><span>{{  translateToEnglish($item->title) }}</span></a></li>
                     @endforeach
                 </ul>
                 <div class="module-holder">
@@ -85,7 +83,7 @@
                         <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>
                     </div>
 
-                    <div class="module-contact"><a style="height: 130px;" class="btn btn--primary" href="/iletisim">İletişime Geç<i class="energia-arrow-right"></i></a></div>
+                    <div class="module-contact"><a style="height: 130px;" class="btn btn--primary" href="/iletisim">{{ translateToEnglish('İletişime Geç')  }}<i class="energia-arrow-right"></i></a></div>
                 </div>
                 <!--  End .module-holder-->
             </div>
@@ -93,7 +91,7 @@
         </nav>
         <!--  End .navbar-->
     </header>
-    <!-- End .header-->
+{{--    <!-- End .header-->--}}
     <!--
     ============================
     Module Search
@@ -120,53 +118,3 @@
     </div>
 
 
-<script src="/js/vendor/jquery-3.6.0.min.js"></script>
-<script src="/js/vendor.js"></script>
-<script src="/js/functions.js"></script>
-<script>
-
-    const setLanguageToTr = function() {
-
-        var localeLanguage;
-
-        localeLanguage = {"language":"turkish"};
-
-
-        $.ajax({
-            type: "POST",
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url: "{{route('anasayfa.changeLanguage')}}",
-            data: localeLanguage, // serializes the form's elements.
-            success: function (localeLanguage) {
-                alert(localeLanguage); // show response from the php script.
-            }
-            // });
-
-        });
-        console.log(localeLanguage);
-
-
-    };
-
-    const setLanguageToEn = function() {
-
-        var localeLanguage;
-
-        localeLanguage = {"language":"english"};
-
-
-        $.ajax({
-            type: "POST",
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url: "{{route('anasayfa.changeLanguage')}}",
-            data: localeLanguage, // serializes the form's elements.
-            success: function (localeLanguage) {
-                alert(localeLanguage); // show response from the php script.
-            }
-            // });
-
-        });
-        console.log(localeLanguage);
-    };
-
-</script>

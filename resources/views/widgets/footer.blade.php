@@ -61,7 +61,7 @@
                                 <li class="address">
                                     <p>{{setting('admin.address')}}</p>
                                 </li>
-                                <li class="directions"><a href="/contact"><i class="energia-location-Icon"></i>Konum Bilgisi</a></li>
+                                <li class="directions"><a href="/contact"><i class="energia-location-Icon"></i>{{ translateToEnglish('Konum Bilgisi') }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer-copyright">
-                        <div class="copyright"><span>&copy; 2022 Svol Danışmanlık. Tüm Hakları Saklıdır </span>
+                        <div class="copyright"><span>{{ translateToEnglish('&copy; 2022 Svol Danışmanlık. Tüm Hakları Saklıdır')}}</span>
                             <ul class="list-unstyled social-icons">
                                 <li><a class="share-facebook" href="{{setting('admin.facebook')}}"><i class="energia-facebook"></i>facebook
                                     </a></li>
@@ -107,6 +107,61 @@
 </body>
 </html>
 
+
+<link href="/css/vendor.min.css" rel="stylesheet"/>
+<link href="/css/style.css" rel="stylesheet"/>
+<script src="/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="/js/vendor.js"></script>
+<script src="/js/functions.js"></script>
+
+
+<script>
+
+    const setLanguageToTr = function() {
+
+        var localeLanguage;
+
+        localeLanguage = {"language":"Tr"};
+
+
+        $.ajax({
+            type: "POST",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            url: "{{route('anasayfa.changeLanguage')}}",
+            data: localeLanguage, // serializes the form's elements.
+            success: function (localeLanguage) {
+                alert(localeLanguage); // show response from the php script.
+            }
+            // });
+
+        });
+        console.log(localeLanguage);
+
+
+    };
+
+    const setLanguageToEn = function() {
+
+        var localeLanguage;
+
+        localeLanguage = {"language":"En"};
+
+
+        $.ajax({
+            type: "POST",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            url: "{{route('anasayfa.changeLanguage')}}",
+            data: localeLanguage, // serializes the form's elements.
+            success: function (localeLanguage) {
+                alert(localeLanguage); // show response from the php script.
+            }
+            // });
+
+        });
+        console.log(localeLanguage);
+    };
+
+</script>
 
 
 
