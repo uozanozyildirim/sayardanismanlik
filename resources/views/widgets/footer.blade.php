@@ -130,12 +130,14 @@
             url: "{{route('anasayfa.changeLanguage')}}",
             data: localeLanguage, // serializes the form's elements.
             success: function (localeLanguage) {
-                alert(localeLanguage); // show response from the php script.
+                // window.location.reload();
+
+                // alert(localeLanguage); // show response from the php script.
             }
             // });
 
         });
-        console.log(localeLanguage);
+        window.location.reload();
 
 
     };
@@ -153,12 +155,15 @@
             url: "{{route('anasayfa.changeLanguage')}}",
             data: localeLanguage, // serializes the form's elements.
             success: function (localeLanguage) {
-                alert(localeLanguage); // show response from the php script.
+
+                window.location.reload();
+
             }
             // });
 
         });
-        console.log(localeLanguage);
+        window.location.reload();
+
     };
 
 </script>

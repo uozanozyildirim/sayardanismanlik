@@ -15,7 +15,7 @@ class LanguageController extends Controller
 
         Cookie::queue(cookie('Language', $language, '120'));
 
-        return 'Kullanıcı Diliniz '.$language. 'Olarak Değişti';
+        return back();
 
     }
 
