@@ -8,3 +8,19 @@ function productImagePath($image_name)
 {
     return public_path('images/products/'.$image_name);
 }
+
+function translateToEnglish($text)
+{
+
+    $locale =  app()->getLocale();
+
+    if($locale = 'english')
+    {
+    return  Stichoza\GoogleTranslate\GoogleTranslate::trans($text, 'en', 'tr');
+    }
+    else
+    {
+        return $text;
+    }
+
+}

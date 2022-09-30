@@ -103,9 +103,7 @@
 </div>
 <!--  Footer Scripts==
 -->
-<script src="/js/vendor/jquery-3.6.0.min.js"></script>
-<script src="/js/vendor.js"></script>
-<script src="/js/functions.js"></script>
+
 </body>
 </html>
 

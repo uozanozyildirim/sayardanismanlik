@@ -4,6 +4,7 @@ namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\DB;
+use League\Flysystem\Config;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -30,6 +31,16 @@ abstract class TestCase extends BaseTestCase
 
         var_dump($item);
 
+
+    }
+
+
+    public function test_get_locale()
+    {
+        app()->setLocale('en');
+        $locale = app()->getLocale();
+
+        return $locale;
 
     }
 

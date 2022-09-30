@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
     <link href="/css/vendor.min.css" rel="stylesheet"/>
     <link href="/css/style.css" rel="stylesheet"/>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <div class="preloader">
@@ -50,8 +51,8 @@
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
                         <ul>
-                            <li> <img src="/images/module-language/en.png" alt="En Language"/><a href="#">english</a></li>
-                            <li> <img src="/images/module-language/ar.png" alt="AR Language"/><a href="#">arabic</a></li>
+                           <li data-id="tr"><img data-id="tr" src="/images/module-language/tr.png" alt="Tr Language"/><a data-id="tr" onclick="setLanguageToTr()" href="#">Türkçe</a> </li>
+                            <li data-id="en"> <img data-id="en" src="/images/module-language/en.png" alt="En Language"/><a data-id="en" onclick="setLanguageToEn()" href="#">English</a></li>
                         </ul>
                     </div>
                 </div>
@@ -66,8 +67,8 @@
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
                         <ul>
-                            <li> <img src="/images/module-language/en.png" alt="En Language"/><a href="#">english</a></li>
-                            <li> <img src="/images/module-language/ar.png" alt="AR Language"/><a href="#">arabic</a></li>
+                            <li> <img src="/images/module-language/en.png" id="english" alt="En Language"/><a href="#">English</a></li>
+                            <li> <img src="/images/module-language/tr.png" alt="AR Language"/><a href="#">Türkçe</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,3 +118,55 @@
         </div><a class="module-cancel" href="#"><i class="fas fa-times"></i></a>
         <!-- End .module-cancel-->
     </div>
+
+
+<script src="/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="/js/vendor.js"></script>
+<script src="/js/functions.js"></script>
+<script>
+
+    const setLanguageToTr = function() {
+
+        var localeLanguage;
+
+        localeLanguage = {"language":"turkish"};
+
+
+        $.ajax({
+            type: "POST",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            url: "{{route('anasayfa.changeLanguage')}}",
+            data: localeLanguage, // serializes the form's elements.
+            success: function (localeLanguage) {
+                alert(localeLanguage); // show response from the php script.
+            }
+            // });
+
+        });
+        console.log(localeLanguage);
+
+
+    };
+
+    const setLanguageToEn = function() {
+
+        var localeLanguage;
+
+        localeLanguage = {"language":"english"};
+
+
+        $.ajax({
+            type: "POST",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            url: "{{route('anasayfa.changeLanguage')}}",
+            data: localeLanguage, // serializes the form's elements.
+            success: function (localeLanguage) {
+                alert(localeLanguage); // show response from the php script.
+            }
+            // });
+
+        });
+        console.log(localeLanguage);
+    };
+
+</script>

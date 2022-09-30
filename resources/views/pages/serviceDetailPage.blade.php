@@ -62,7 +62,7 @@
 {{--                            </div>--}}
 {{--                            <!-- End .video-->--}}
 {{--                        </div>--}}
-                        @if($frequentlyAskedQuestions)
+                        @if(($frequentlyAskedQuestions))
                         <div class="entry-benefits entry-infos">
                             <h5 class="entry-heading">Sık Sorulan Sorular</h5>
                             <div class="accordion accordion-2" id="accordion03">
@@ -94,16 +94,17 @@
 
 @include('widgets.footer')
 
-<style>
+@if($serviceDetail->color_code)
+
+    <style>
 
     .widget{
         background-color: {{ $serviceDetail->color_code }};
 
     }
 
-
 </style>
-
+@endif
 
 @if($serviceDetail->color_code)
 
@@ -116,7 +117,6 @@
         .module-contact .btn {
             background-color: {{ $serviceDetail->color_code }};
         }
-
 
     </style>
 

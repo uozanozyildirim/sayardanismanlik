@@ -11,6 +11,8 @@ use App\Service;
 use App\Widget;
 use Illuminate\Routing\Controller as BaseController;
 use TCG\Voyager\Models\Post;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+
 
 class WidgetController extends BaseController
 {
@@ -145,10 +147,12 @@ class WidgetController extends BaseController
 
     public function InformationPoolWidgets()
     {
+
+        $tr = new GoogleTranslate('en'); // Translates into English
         $menus = new Menu();
         $faqs = new FrequentlyAskedQuestion();
 
-        $frequentlyAskedQuestions = $faqs->getItems();
+        $frequentlyAskedQuestions =  $faqs->getItems();
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
         $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');

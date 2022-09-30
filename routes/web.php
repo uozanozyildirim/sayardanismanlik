@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'WidgetController@HomepageWidgets');
+Route::get('/', 'WidgetController@HomepageWidgets')->name('anasayfa');
+Route::post('/', 'LanguageController@changeLocaleLanguage')->name('anasayfa.changeLanguage');
 Route::get('/anasayfa', 'WidgetController@HomepageWidgets');
 Route::get('/hakkimizda', 'WidgetController@AboutPageWidgets');
 Route::get('/haberler', 'WidgetController@NewsPageWidgets');
