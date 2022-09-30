@@ -6,12 +6,12 @@
             <!--- Right Aligned Section  -->
             <div class="col-12 col-lg-6">
                 <div class="heading heading-12">
-                    <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{ $service->label }}</p>
-                    <h2 class="heading-title">{{ $service->title }}</h2>
+                    <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{ translateToEnglish($service->label) }}</p>
+                    <h2 class="heading-title">{{  translateToEnglish($service->title)  }}</h2>
                 </div>
                 <div class="about-block">
                     <div class="block-left">
-                        <p class="paragraph">{{  strip_tags(html_entity_decode(($service->excerpt) )) }}</p>
+                        <p class="paragraph">{{  strip_tags(html_entity_decode(translateToEnglish($service->excerpt) )) }}</p>
                         <div class="signature-block"><a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >{{ translateToEnglish("Devamını Oku") }}<i class="energia-arrow-right"></i></a>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="about-block">
                     <div class="block-left">
-                        <p class="paragraph">{{ strip_tags(html_entity_decode($service->excerpt)) }}</p>
+                        <p class="paragraph">{{ strip_tags(html_entity_decode(translateToEnglish($service->excerpt) )) }}</p>
                         <div class="signature-block"><a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >{{ translateToEnglish("Devamını Oku") }} <i class="energia-arrow-right"></i></a>
                         </div>
                     </div>
