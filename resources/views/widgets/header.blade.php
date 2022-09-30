@@ -65,8 +65,8 @@
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
                         <ul>
-                            <li> <img src="/images/module-language/en.png" id="english" alt="En Language"/><a href="#">English</a></li>
-                            <li> <img src="/images/module-language/tr.png" alt="AR Language"/><a href="#">Türkçe</a></li>
+                            <li> <img src="/images/module-language/en.png" id="english" alt="En Language"/><a onclick="setLanguageToTr()" href="#">English</a></li>
+                            <li> <img src="/images/module-language/tr.png" alt="AR Language"/><a href="#" onclick="setLanguageToTr()">Türkçe</a></li>
                         </ul>
                     </div>
                 </div>
