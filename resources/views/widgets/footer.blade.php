@@ -130,15 +130,18 @@
             url: "{{route('anasayfa.changeLanguage')}}",
             data: localeLanguage, // serializes the form's elements.
             success: function (localeLanguage) {
-                // window.location.reload();
+
+                setTimeout(function() {
+                    location.reload();
+                }, 100);
 
                 // alert(localeLanguage); // show response from the php script.
             }
             // });
 
         });
-        window.location.reload();
-    };
+
+       };
 
     const setLanguageToEn = function() {
 
@@ -154,13 +157,13 @@
             data: localeLanguage, // serializes the form's elements.
             success: function (localeLanguage) {
 
-                window.location.reload();
-
+                setTimeout(function() {
+                    location.reload();
+                }, 100);
             }
-            // });
+            });
 
-        });
-        window.location.reload();
+
 
     };
 
