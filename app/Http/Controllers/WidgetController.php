@@ -62,16 +62,14 @@ class WidgetController extends BaseController
         $menus = new Menu();
 
 
-        $mainMenuItems = $menus->getMenusByName('main_menu');
-        $footerMenuItems = $menus->getMenusByName('footer_menu');
         $haberSlider = $widget->getNewsWithLimit(3);
-
-
         $tumHaberler = $widget->getAllNewsWithEditorAndCategory();
         $mainMenuItems = $menus->getMenusByName('main_menu');
-        $footerMenuItems = $menus->getMenusByName('footer_menu');
+        $footerMainItems = $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
 
-        return view('pages.blogList', compact('tumHaberler','footerMenuItems','mainMenuItems', 'footerMenuItems','mainMenuItems','haberSlider'));
+
+        return view('pages.blogList', compact('tumHaberler','footerMainItems','mainMenuItems', 'footerSubMenuItems','mainMenuItems','haberSlider'));
     }
 
     public function NewsDetailPageWidgets($slug)
@@ -149,7 +147,6 @@ class WidgetController extends BaseController
     public function InformationPoolWidgets()
     {
 
-        $tr = new GoogleTranslate('en'); // Translates into English
         $menus = new Menu();
         $faqs = new FrequentlyAskedQuestion();
 

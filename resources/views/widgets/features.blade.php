@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-12 col-lg-4">
                 <div class="more-features">
-                    <p>{{ translateToEnglish('Sorularınız için bizi aramaktan çekinmeyin') }}<a href="tel:01061245741"><br>+90 538 234 23 12</a></p><a class="btn btn--bordered btn--white" href="page-about.html">
+                    <p>{{ translateToEnglish('Sorularınız için bizi aramaktan çekinmeyin') }}<a href="tel:01061245741"><br>+90 538 234 23 12</a></p><a class="btn btn--bordered btn--white" href="/iletisim">
                     {{ translateToEnglish('Ücretsiz Bilgi')    }}<i class="energia-arrow-right"></i></a>
                 </div>
             </div>

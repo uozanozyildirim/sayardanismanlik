@@ -16,7 +16,7 @@
     <div class="dual-ring"></div>
 </div>
 
-    <header style="margin-bottom: 25px;" class="header header-light header-topbar header-topbar1 header-shadow" id="navbar-spy">
+    <header class="header header-light header-topbar header-topbar1 header-shadow" id="navbar-spy">
         <div class="top-bar">
             <div class="block-left">
                 <div class="top-contact">
@@ -55,8 +55,17 @@
                 </div>
             </div>
         </div>
-        <nav style="height: 130px;" class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="/"><img class="logo logo-dark"  src="/storage/{{setting("admin.site_logo")}}" alt="Sayar Cevre Danismanlik Logo"/>
-                <img  style="height: 90px;" class="logo logo-mobile" src="/storage/{{setting('admin.site_logo')}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/></a>
+
+
+        <style>
+
+
+        </style>
+
+
+        <nav class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="/">
+                <img class="logo logo-dark"  src="/storage/{{setting("admin.site_logo")}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/>
+            <img style="height: 90px;"  class="logo logo-mobile" src="/storage/{{setting('admin.site_logo')}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/></a>
             <div class="module-holder module-holder-phone">
                 <div class="module module-search">
                     <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>
@@ -83,7 +92,7 @@
                         <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>
                     </div>
 
-                    <div class="module-contact"><a style="height: 130px;" class="btn btn--primary" href="/iletisim">{{ translateToEnglish('İletişime Geç')  }}<i class="energia-arrow-right"></i></a></div>
+                    <div class="module-contact"><a  class="btn btn--primary" href="/iletisim">{{ translateToEnglish('İletişime Geç')  }}<i class="energia-arrow-right"></i></a></div>
                 </div>
                 <!--  End .module-holder-->
             </div>

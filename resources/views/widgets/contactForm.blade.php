@@ -5,7 +5,7 @@
             <div class="heading heading-light heading-6">
                 <p class="heading-subtitle">{{ translateToEnglish('Svol Danışmanlık') }}</p>
                 <h2 class="heading-title"> {{ translateToEnglish('Sürdürülebilirlik konusunda mevzuatlara uygun size özel bir çözüm üretelim!') }} </h2>
-                <div class="contact-action"><a class="btn btn--white" href="/hizmetlerimiz">{{ translateToEnglish("Daha Fazlası İçin")}}<i
+                <div class="contact-action"><a class="btn btn--white" href="/hizmetler">{{ translateToEnglish("Daha Fazlası İçin")}}<i
                             class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white"
                                                                    href="/hakkimizda">{{ translateToEnglish('Değerlerimiz')}}</a></div>
                 <div class="contact-quote"><img src="/images/icons/noteicon.png" alt="icon"/>

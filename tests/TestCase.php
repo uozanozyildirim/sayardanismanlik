@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use App\Menu;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\DB;
 use League\Flysystem\Config;
@@ -50,6 +51,16 @@ abstract class TestCase extends BaseTestCase
         $redis = Redis::connection();
         $redis->set('name', 'Dave');
         $name = $redis->get('name');
-        }
+    }
+
+    public function test_recursive_footer_items()
+    {
+        $menus = New Menu();
+        $footerSubMenuItems = $menus->getMainMenuByName('footer_menu');
+        var_dump($footerSubMenuItems);
+
+    }
+
+
 
 }
