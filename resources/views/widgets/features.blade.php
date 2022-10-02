@@ -17,8 +17,9 @@
                         {{  translateToEnglish($ikiUstYaziAltResim['sagAciklama']) }}
                     </p>
                     <div class="actions-holder"><a class="btn btn--primary btn--inversed" href="/">
-                            {{  translateToEnglish($ikiUstYaziAltResim['buton1'])  }}
-                            <i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white" href="/">{{  translateToEnglish($ikiUstYaziAltResim['buton2'])  }}</a></div>
+                    {{  translateToEnglish($ikiUstYaziAltResim['buton1'])  }}
+                     <i class="energia-arrow-right"></i></a><a class="btn btn--bordered btn--white" href="/">
+                     {{  translateToEnglish($ikiUstYaziAltResim['buton2'])  }}</a></div>
                 </div>
             </div>
             <!-- End .row-->
@@ -27,8 +28,8 @@
         <div class="row">
             <div class="col-12 col-lg-4">
                 <div class="more-features">
-                    <p>{{ translateToEnglish('Sorularınız için bizi aramaktan çekinmeyin') }}<a href="tel:01061245741"><br>+90 538 234 23 12</a></p><a class="btn btn--bordered btn--white" href="/iletisim">
-                    {{ translateToEnglish('Ücretsiz Bilgi')    }}<i class="energia-arrow-right"></i></a>
+                    <p>{{ translateToEnglish('Sorularınız için bizi aramaktan çekinmeyin') }}<a href="tel:01061245741"><br>{{ setting('admin.phone_number') }}</a></p><a class="btn btn--bordered btn--white" href="/iletisim">
+                    {{ translateToEnglish('Ücretsiz Bilgi') }}<i class="energia-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-12 col-lg-8">

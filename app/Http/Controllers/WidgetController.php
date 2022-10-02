@@ -77,6 +77,9 @@ class WidgetController extends BaseController
 
         $menus = new Menu();
 
+        $mCategories = new Category();
+
+        $categories = $mCategories->getCategories();
 
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
@@ -85,8 +88,8 @@ class WidgetController extends BaseController
 
         if ($slug) {
             $widget = new News();
-            $haberDetay = $widget->getNewsBySlug($slug);
-            return view('pages.blogDetailPage', compact('haberDetay', 'footerMainItems','footerSubMenuItems', 'mainMenuItems'));
+            $serviceDetail = $widget->getNewsBySlug($slug);
+            return view('pages.blogDetailPage', compact('serviceDetail','categories', 'footerMainItems','footerSubMenuItems', 'mainMenuItems'));
 
         } else {
             return view('pages.homePage');

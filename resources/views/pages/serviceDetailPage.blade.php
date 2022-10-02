@@ -4,12 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4 order-1">
-
                 <div class="sidebar sidebar-service">
                     <!-- Services-->
                     <div class="widget widget-services">
                         <div class="widget-title">
-                            <h5>Hizmet Kategorilerimiz</h5>
+                            <h5>{{ translateToEnglish('Hizmet Kategorilerimiz')}}</h5>
                         </div>
                         <div class="widget-content">
                             <ul class="list-unstyled">
@@ -25,7 +24,7 @@
 
                     <div class="widget widget-reservation"><img src="/images/blog/sidebar/reservation.jpg" alt="img"/>
                         <div class="widget-content"><i class="flaticon-040-green-energy"></i>
-                            <p>Bize iletişim adreslerimden ulaşabilirsiniz </p><a class="btn btn--bordered btn--white" href="/iletisim">Lütfen Görüşme İçin Rezervasyon Yapınız</a><a href="tel:05355232114"><span class="energia-phone-Icon"></span>+90 535 523 21 14</a>
+                            <p>{{ translateToEnglish('Bize iletişim adreslerimden ulaşabilirsiniz') }}</p><a class="btn btn--bordered btn--white" href="/iletisim">{{ translateToEnglish('Lütfen Görüşme İçin Rezervasyon Yapınız') }}</a><a href="tel:05355232114"><span class="energia-phone-Icon"></span>{{ setting('admin.phone_number') }}</a>
                         </div>
                     </div>
                     <!-- End .widget-reservation-->
@@ -42,8 +41,7 @@
                             <div>{{ strip_tags(html_entity_decode($serviceDetail->content))  }}</div>
                             <div class="row">
                                 <div class="col-12 p-2 col-md-6"><img width="100%" src="/storage/{{ $serviceDetail->image }}" alt="image"/></div>
-{{--                                <div class="col-12 col-md-6"><img src="/storage/{{ $serviceDetail->image }}" alt="image"/></div>--}}
-{{--                                <div class="col-12 col-md-6"><img src="/images/services/single/2.jpg" alt="image"/></div>--}}
+
                             </div>
                         </div>
 
@@ -62,9 +60,11 @@
 {{--                            </div>--}}
 {{--                            <!-- End .video-->--}}
 {{--                        </div>--}}
+
+
                         @if(($frequentlyAskedQuestions))
                         <div class="entry-benefits entry-infos">
-                            <h5 class="entry-heading">Sık Sorulan Sorular</h5>
+                            <h5 class="entry-heading">{{ translateToEnglish('Sık Sorulan Sorular')}}</h5>
                             <div class="accordion accordion-2" id="accordion03">
                                 <div class="row">
                                    @foreach($frequentlyAskedQuestions as $faq)
