@@ -26,7 +26,7 @@
                             <div class="entry-bio">
                                 <p>{{ translateToEnglish($tekHaber->excerpt)  }}</p>
                             </div>
-                            <div class="entry-more"><a class="btn btn--white btn-bordered" href="/haber/{{ $tekHaber->slug }}">{{ translateToEnglish("Devamını Oku") }}                                Oku}}<i
+                            <div class="entry-more"><a class="btn btn--white btn-bordered" href="/haber/{{ $tekHaber->slug }}">{{ translateToEnglish("Devamını Oku") }}<i
                             class="energia-arrow-right"></i></a></div>
                         </div>
                     </div>
