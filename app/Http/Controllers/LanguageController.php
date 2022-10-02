@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\Cookie;
 
 class LanguageController extends Controller
@@ -13,10 +14,9 @@ class LanguageController extends Controller
         $language = $request['language'];
         app()->setLocale($language);
 
-        Cookie::queue(cookie('Language', $language, '120'));
+        Cookie::queue(cookie('Language', $language, '240'));
 
         return back();
-
     }
 
 }

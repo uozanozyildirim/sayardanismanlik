@@ -5,6 +5,7 @@ namespace Tests;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Illuminate\Support\Facades\DB;
 use League\Flysystem\Config;
+use Illuminate\Support\Facades\Redis;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -43,5 +44,12 @@ abstract class TestCase extends BaseTestCase
         return $locale;
 
     }
+
+    public function test_redis_connect_test()
+    {
+        $redis = Redis::connection();
+        $redis->set('name', 'Dave');
+        $name = $redis->get('name');
+        }
 
 }

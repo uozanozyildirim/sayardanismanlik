@@ -78,7 +78,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer-copyright">
-                        <div class="copyright"><span>{{ translateToEnglish('&copy; 2022 Svol Danışmanlık. Tüm Hakları Saklıdır')}}</span>
+                        <div class="copyright"><span>{{ translateToEnglish('2022 Svol Danışmanlık. Tüm Hakları Saklıdır')}}</span>
                             <ul class="list-unstyled social-icons">
                                 <li><a class="share-facebook" href="{{setting('admin.facebook')}}"><i class="energia-facebook"></i>facebook
                                     </a></li>
@@ -138,8 +138,6 @@
 
         });
         window.location.reload();
-
-
     };
 
     const setLanguageToEn = function() {

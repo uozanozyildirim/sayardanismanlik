@@ -65,6 +65,8 @@ class WidgetController extends BaseController
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMenuItems = $menus->getMenusByName('footer_menu');
         $haberSlider = $widget->getNewsWithLimit(3);
+
+
         $tumHaberler = $widget->getAllNewsWithEditorAndCategory();
         $mainMenuItems = $menus->getMenusByName('main_menu');
         $footerMenuItems = $menus->getMenusByName('footer_menu');
@@ -135,7 +137,6 @@ class WidgetController extends BaseController
     {
         $menus = new Menu();
         $mServices = new Service();
-
 
         $services =  $mServices->getServices(10);
         $mainMenuItems = $menus->getMenusByName('main_menu');
