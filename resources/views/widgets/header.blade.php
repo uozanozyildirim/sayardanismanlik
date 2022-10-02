@@ -27,14 +27,13 @@
                     </div>
                     <div class="contact-infos"><i class="energia-email--icon"></i>
                         <div class="contact-body">
-                            <p>Email: <a href="mailto:{{setting('admin.email')}}">{{ strtolower(setting('admin.email')) }}</a></p>
+                            <p>{{ translateToEnglish("Email")}}: <a href="mailto:{{setting('admin.email')}}">{{ strtolower(setting('admin.email')) }}</a></p>
                         </div>
                     </div>
                     @if(setting('admin.work_hours'))
                     <div class="contact-infos"><i class="energia-clock-Icon"></i>
                         <div class="contact-body">
-
-                            <p>Çalışma Saatleri : {{ setting('admin.work_hours') }}</p>
+                              <p>{{ translateToEnglish("Çalışma Saatleri")}} : {{ setting('admin.work_hours') }}</p>
                         </div>
                     </div>
                     @endif
@@ -49,14 +48,15 @@
                     <div class="selected"><img src="/images/module-language/en.png" alt="En Language"/><span>english</span><i class="fas fa-chevron-down"></i></div>
                     <div class="lang-list">
                         <ul>
-                           <li data-id="tr"><img data-id="tr" src="/images/module-language/tr.png" alt="Tr Language"/><a data-id="tr" onclick="setLanguageToTr()" href="#">Türkçe</a> </li>
+                            <li data-id="tr"><img data-id="tr" src="/images/module-language/tr.png" alt="Tr Language"/><a data-id="tr" onclick="setLanguageToTr()" href="#">Türkçe</a> </li>
                             <li data-id="en"> <img data-id="en" src="/images/module-language/en.png" alt="En Language"/><a data-id="en" onclick="setLanguageToEn()" href="#">English</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <nav style="height: 130px;" class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="/"><img class="logo logo-dark"  src="/storage/{{setting("admin.site_logo")}}" alt="Sayar Cevre Danismanlik Logo"/><img  style="height: 90px;" class="logo logo-mobile" src="/storage/{{setting('admin.site_logo')}}" alt="Svol Danismanlik"/></a>
+        <nav style="height: 130px;" class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="/"><img class="logo logo-dark"  src="/storage/{{setting("admin.site_logo")}}" alt="Sayar Cevre Danismanlik Logo"/>
+                <img  style="height: 90px;" class="logo logo-mobile" src="/storage/{{setting('admin.site_logo')}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/></a>
             <div class="module-holder module-holder-phone">
                 <div class="module module-search">
                     <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>
@@ -103,7 +103,7 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                         <form class="form-search">
-                            <input class="form-control" type="text" placeholder="Sitede Arama Yapınız"/>
+                            <input class="form-control" type="text" placeholder="{{ translateToEnglish("Sitede Arama Yapınız")}}"/>
                             <button></button>
                         </form>
                         <!-- End .form-search -->

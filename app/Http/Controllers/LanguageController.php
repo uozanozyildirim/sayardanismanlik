@@ -10,7 +10,6 @@ class LanguageController extends Controller
 {
     public function changeLocaleLanguage(Request $request) {
 
-
         $language = $request['language'];
         app()->setLocale($language);
 

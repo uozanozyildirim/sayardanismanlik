@@ -27,7 +27,7 @@ function translateToEnglish($text)
 
         if($redis->get($text))
         {
-            return  $redis->get($text);
+            return   $redis->get($text);
         }
         else
         {

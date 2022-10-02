@@ -15,7 +15,7 @@
                                         <div class="project-title">
                                             <h4><a href="/haber/{{ $row->slug }}">{{  translateToEnglish($row->title)  }}</a></h4>
                                         </div>
-                                        <div class="project-cat"><a href="/haber/{{ $row->slug }}">{{  translateToEnglish($row->category_title)  }}</a>
+                                        <div class="project-cat"><a href="/haber/{{ translateToEnglish($row->slug) }}">{{  translateToEnglish($row->category_title)  }}</a>
                                         </div>
                                     </div>
                                     <!-- End .project-content -->
