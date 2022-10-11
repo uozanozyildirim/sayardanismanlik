@@ -11,8 +11,11 @@
                 </div>
                 <div class="about-block">
                     <div class="block-left">
-                        <p class="paragraph">{{  strip_tags(html_entity_decode(translateToEnglish($service->excerpt) )) }}</p>
-                        <div class="signature-block"><a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >{{ translateToEnglish("Devamını Oku") }}<i class="energia-arrow-right"></i></a>
+{{--                        <p class="paragraph">{{  strip_tags(html_entity_decode(translateToEnglish($service->excerpt) )) }}</p>--}}
+                        <div class="signature-block">
+{{--                            <a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >{{ translateToEnglish("Devamını Oku") }}<i class="energia-arrow-right">--}}
+{{--                                    --}}
+{{--                                </i></a>--}}
                         </div>
                     </div>
                 </div>
@@ -20,14 +23,18 @@
             <!-- End .col-lg-6-->
             <div class="col-12 col-lg-5 offset-lg-1">
                 <div class="about-img">
+                    <a href="/hizmet/{{ $service->slug }}">
                     <div class="about-img-holder bg-overlay">
-                        <div class="bg-section"><img src="/storage/{{$service->image}}" alt="about Image"/></div>
+                        <div class="bg-section">
+                            <img src="/storage/{{$service->image}}" alt="about Image"/>
+                        </div>
                     </div>
 
                     <div style="background-color: {{ $service->color_code }};" class="counter counter-4">
                             <h6 style="color: white;">{{  translateToEnglish($service->title) }}</h6>
                     </div>
                     <!-- End .counter-->
+                    </a>
                 </div>
             </div>
             <!--- End Right Aligned Section  -->
@@ -40,9 +47,11 @@
             <!--- Right Aligned Section  -->
          <div class="col-12 col-lg-5 offset-lg-1">
                 <div class="about-img">
+                    <a href="/hizmet/{{ $service->slug }}">
                     <div class="about-img-holder bg-overlay">
-                        <div class="bg-section"><img src="/storage/{{ $service->image }}" alt="about Image"/></div>
+                       <div class="bg-section"><img src="/storage/{{ $service->image }}" alt="about Image"/></div>
                     </div>
+                    </a>
                     <!-- Start .counter-->
                     <div style="background-color: {{ $service->color_code }}" class="counter counter-4">
                             <h6 style="color: white;">{{  translateToEnglish($service->title)  }}</h6>
@@ -57,8 +66,9 @@
                 </div>
                 <div class="about-block">
                     <div class="block-left">
-                        <p class="paragraph">{{ strip_tags(html_entity_decode(translateToEnglish($service->excerpt) )) }}</p>
-                        <div class="signature-block"><a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >{{ translateToEnglish("Devamını Oku") }} <i class="energia-arrow-right"></i></a>
+{{--                        <p class="paragraph">{{ strip_tags(html_entity_decode(translateToEnglish($service->excerpt) )) }}</p>--}}
+                        <div class="signature-block">
+{{--                            <a class="btn btn--secondary" href="/hizmet/{{ $service->slug }}" style="background-color: {{ $service->color_code }}" >{{ translateToEnglish("Devamını Oku") }} <i class="energia-arrow-right"></i></a>--}}
                         </div>
                     </div>
                 </div>
