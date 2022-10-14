@@ -41,7 +41,7 @@
             </div>
             <div class="block-right">
                 <!-- Start .social-links-->
-                <div class="social-links"><a class="share-facebook" href="/{{setting('admin.facebook')}}"><i class="energia-facebook"></i></a><a class="share-instagram" href="/{{setting('admin.instagram')}}"><i class="energia-twitter"></i></a><a class="share-twitter" href="/{{setting('admin.youtube')}}"><i class="energia-youtube"></i></a></div>
+                <div class="social-links"><a class="share-whatsapp" href="/{{setting('admin.facebook')}}"><i class="energia-facebook"></i></a><a class="share-instagram" href="/{{setting('admin.instagram')}}"><i class="energia-twitter"></i></a></div>
                 <!-- End .social-links-->
                 <div class="topbar-links"><a href="/haberler">{{ translateToEnglish('Haberler') }}</a></div>
                 <div class="module module-language">
