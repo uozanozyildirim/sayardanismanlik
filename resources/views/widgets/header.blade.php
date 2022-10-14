@@ -27,7 +27,7 @@
                     </div>
                     <div class="contact-infos"><i class="energia-email--icon"></i>
                         <div class="contact-body">
-                            <p>{{ translateToEnglish("Email")}}: <a href="mailto:{{setting('admin.email')}}">{{ strtolower(setting('admin.email')) }}</a></p>
+                            <p>{{ translateToEnglish("Email")}}: <a href="mailto:{{ setting('admin.email') }}">{{ setting('admin.email') }}</a></p>
                         </div>
                     </div>
                     @if(setting('admin.work_hours'))
@@ -56,13 +56,6 @@
             </div>
         </div>
 
-
-        <style>
-
-
-        </style>
-
-
         <nav class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="/">
                 <img class="logo logo-dark"  src="/storage/{{setting("admin.site_logo")}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/>
             <img style="height: 90px;"  class="logo logo-mobile" src="/storage/{{setting('admin.site_logo')}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/></a>
@@ -84,7 +77,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav me-auto">
                     @foreach($mainMenuItems as $item)
-                    <li class="nav-item" id="contact" data-hover=""><a href="{{ $item->url  }}"><span>{{  translateToEnglish($item->title) }}</span></a></li>
+                    <li class="nav-item" id="contact"><a href="{{ $item->url  }}"><span>{{  translateToEnglish($item->title) }}</span></a></li>
                     @endforeach
                 </ul>
                 <div class="module-holder">
@@ -101,11 +94,7 @@
         <!--  End .navbar-->
     </header>
 {{--    <!-- End .header-->--}}
-    <!--
-    ============================
-    Module Search
-    ============================
-    -->
+
     <div class="module-content module-search-warp">
         <div class="pos-vertical-center">
             <div class="container">

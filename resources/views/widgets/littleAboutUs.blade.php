@@ -17,22 +17,22 @@
                 </div>
                 <div class="about-block">
                     <div class="row">
-                        <div class="col-12 col-lg-7">
+                        <div class="col-12 col-lg-12">
                             <div class="block-left">
                                 <p class="paragraph">{{ translateToEnglish($solResimSagYazi['solBaslik'])  }}</p>
-                                <p> {{  translateToEnglish($solResimSagYazi['solAciklama'])  }} </p><a class="btn btn--secondary">{{ translateToEnglish('Devamı')}} <i class="energia-arrow-right"></i></a>
+                                <p> {{  translateToEnglish($solResimSagYazi['solAciklama'])  }} </p><a href="/hizmetler" class="btn btn--secondary">{{ translateToEnglish('Devamı')}} <i class="energia-arrow-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-5">
-                            <div class="block-right">
-                                <div class="prief-set">
-                                    <h6>{{ translateToEnglish($solResimSagYazi['sagBaslik'])   }}</h6>
+{{--                        <div class="col-12 col-lg-5">--}}
+{{--                            <div class="block-right">--}}
+{{--                                <div class="prief-set">--}}
+{{--                                    <h6>{{ translateToEnglish($solResimSagYazi['sagBaslik'])   }}</h6>--}}
 
-                                    <p>{{  translateToEnglish($solResimSagYazi['sagAciklama'])  }}</p>
+{{--                                    <p>{{  translateToEnglish($solResimSagYazi['sagAciklama'])  }}</p>--}}
 
-                                </div>
-                            </div>
-                        </div>
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
