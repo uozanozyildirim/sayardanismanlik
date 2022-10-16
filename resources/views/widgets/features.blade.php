@@ -39,7 +39,7 @@
                 ============================
                 -->
                 <div class="video video-1 bg-overlay bg-overlay-video" id="video-1">
-                    <div class="bg-section"><img src="/images/video/1.jpg" alt="background"/></div><a class="popup-video btn-video" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i><span>watch our video!</span></a>
+                    <div class="bg-section"><img src="/images/video/1.jpg" alt="background"/></div><a class="popup-video btn-video" href=" {{  $ikiUstYaziAltResim['videoLink'] }}"> <i class="fas fa-play"></i><span>{{ translateToEnglish('Videomuza Göz Atın') }}</span></a>
                     <!-- End .popup-video-->
                 </div>
             </div>
