@@ -46,7 +46,7 @@
                         <div class="member-info"><a href="javascript:void(0)">{{ $ikiResimIkiYazi['kisiIsimIki'] }}</a>
                             <h6 style="line-height: 30px;"> {{  translateToEnglish('Beyza Nur Sayar Bıdı 2017 yılında Sakarya Üniversitesi Mühendislik fakültesinden mezun olduktan sonra  Tehlikeli Madde Güvenlik Danışmanı olarak çalışmaya başlamıştır. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı ile Ulaştırma ve Altyapı Bakanlığını’nın yayınlamış olduğumu mevzuatlarda çeşitli çalışmalar yapmış ve eğitimler almış olup; Atık Yönetimi, Karbon Ayakizi Hesaplama, Kimyasal Değerlendirme (ön kayıt) ve Güvenlik Bilgi Formu inceleme hususlarında geniş bilgi sahibi olmuştur.
 
-                                2022 yılında İstanbuk Teknik Üniversitesi’nden Kalite Yöneticiliği Uzmanlık sertifikası ile birlikte iç tetkik eğitimlerini alarak bu alanda çalışmalara başlamıştır. Sayar Bıdı aynı zamanda Sosyal Uygunluk üzerine de eğitimler alıp çalışmalarına devam etmektedir.</h6>
+                                2022 yılında İstanbuk Teknik Üniversitesi’nden Kalite Yöneticiliği Uzmanlık sertifikası ile birlikte iç tetkik eğitimlerini alarak bu alanda çalışmalara başlamıştır. Sayar Bıdı aynı zamanda Sosyal Uygunluk üzerine de eğitimler alıp çalışmalarına devam etmektedir.
                             ') }}
                         </div>
                         <!-- End .member-info-->
