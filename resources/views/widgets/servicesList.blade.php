@@ -19,7 +19,7 @@
                             @foreach($subServices as $subService)
                                 @if($service->id == $subService->parent_id)
                                     <div onclick="window.location = '/hizmet/{{$subService->slug}}' ">
-                                        <div class="card active-acc">
+                                        <div style="color: {{ $subService->color_code }}" class="card active-acc">
                                             <div class="card-heading">
                                                 <a style="color: {{ $subService->color_code }}" class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-{{ $subService->id }}" href="#collapse01-{{ $subService->id }}">
                                                     {{ translateToEnglish($subService->title)  }}
@@ -96,7 +96,7 @@
                                 @foreach($subServices as $subService)
                                     @if($service->id == $subService->parent_id)
                                         <div onclick="window.location = '/hizmet/{{$subService->slug}}' ">
-                                            <div class="card active-acc m-5">
+                                            <div style="color: {{ $subService->color_code }}" class="card active-acc m-5">
                                                 <div class="card-heading">
                                                     <a style="color: {{ $subService->color_code }}" class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-{{ $subService->id }}" href="#collapse01-{{ $subService->id }}">
                                                         {{ translateToEnglish($subService->title)  }}
