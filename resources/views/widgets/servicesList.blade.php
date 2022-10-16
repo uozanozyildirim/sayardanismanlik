@@ -9,6 +9,28 @@
                     <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{ translateToEnglish($service->label) }}</p>
                     <h2 class="heading-title">{{  translateToEnglish($service->title)  }}</h2>
                 </div>
+
+                <!-- Accordion Table --->
+
+                <div class="accordion accordion-2" id="accordion03">
+                    <div class="row">
+                        <div class="col-8  offset-2">
+
+                            @foreach($subServices as $subService)
+                                @if($service->id == $subService->parent_id)
+                                    <div onclick="window.location = '/hizmet/{{$subService->slug}}' ">
+                                        <div class="card active-acc">
+                                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-{{ $subService->id }}" href="#collapse01-{{ $subService->id }}">
+                                                    {{ translateToEnglish($subService->title)  }}
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion End -->
                 <div class="about-block">
                     <div class="block-left">
 {{--                        <p class="paragraph">{{  strip_tags(html_entity_decode(translateToEnglish($service->excerpt) )) }}</p>--}}
@@ -26,7 +48,7 @@
                     <a href="/hizmet/{{ $service->slug }}">
                     <div class="about-img-holder bg-overlay">
                         <div class="bg-section">
-                            <img src="/storage/{{$service->image}}" alt="about Image"/>
+                            <img src="{{ config('app.url') }}/storage/{{$service->image}}" alt="about Image"/>
                         </div>
                     </div>
 
@@ -49,7 +71,7 @@
                 <div class="about-img">
                     <a href="/hizmet/{{ $service->slug }}">
                     <div class="about-img-holder bg-overlay">
-                       <div class="bg-section"><img src="/storage/{{ $service->image }}" alt="about Image"/></div>
+                       <div class="bg-section"><img src="{{config('app.url')}}/storage/{{ $service->image }}" alt="about Image"/></div>
                     </div>
                     </a>
                     <!-- Start .counter-->
@@ -63,6 +85,30 @@
                 <div class="heading heading-12">
                     <p style="color: {{ $service->color_code }}" class="heading-subtitle">{{  translateToEnglish($service->label)  }}</p>
                     <h2 class="heading-title">{{  translateToEnglish($service->title)  }}</h2>
+
+                    <!-- Accordion Table --->
+
+                    <div class="accordion accordion-2" id="accordion03">
+                        <div class="row">
+                            <div class="col-8  offset-2">
+
+                                @foreach($subServices as $subService)
+                                    @if($service->id == $subService->parent_id)
+                                        <div onclick="window.location = '/hizmet/{{$subService->slug}}' ">
+                                            <div class="card active-acc m-5">
+                                                <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-{{ $subService->id }}" href="#collapse01-{{ $subService->id }}">
+                                                        {{ translateToEnglish($subService->title)  }}
+                                                    </a></div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion End -->
+
                 </div>
                 <div class="about-block">
                     <div class="block-left">

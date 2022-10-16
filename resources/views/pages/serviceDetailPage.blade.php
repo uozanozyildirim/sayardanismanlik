@@ -12,8 +12,8 @@
                         </div>
                         <div class="widget-content">
                             <ul class="list-unstyled">
-                                @foreach($categories as $category)
-                                <li><a href="{{ $category->slug }}"> <span>{{ $category->name }}</span><i class="energia-arrow-right"></i></a></li>
+                                @foreach($services as $service)
+                                <li><a href="/hizmet/{{ $service->slug }}"> <span>{{ $service->title }}</span><i class="energia-arrow-right"></i></a></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -40,7 +40,7 @@
                             <h5 class="entry-heading"> {{$serviceDetail->title}} </h5>
                             <div>{{ strip_tags(html_entity_decode($serviceDetail->content))  }}</div>
                             <div class="row">
-                                <div class="col-12 p-2 col-md-6"><img width="100%" src="/storage/{{ $serviceDetail->image }}" alt="image"/></div>
+                                <div class="col-12 p-2 col-md-6"><img width="100%" src="{{ config('app.url')  }}/storage/{{ $serviceDetail->image }}" alt="image"/></div>
 
                             </div>
                         </div>

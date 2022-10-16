@@ -109,14 +109,20 @@ class WidgetController extends BaseController
         $footerMainItems = $menus->getMainMenuByName('footer_menu');
         $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
 
+
+
         if ($slug) {
             $widget = new Service();
             $faqs = new FrequentlyAskedQuestion();
 
+            $services = $widget->getServices();
+            $subServices = $widget->getSubServices();
+            $services = array_merge(json_decode($services), json_decode($subServices));
+
             $serviceDetail = $widget->getServiceBySlug($slug);
             $frequentlyAskedQuestions = $faqs->getItemsByServiceSlug($slug);
 
-            return view('pages.serviceDetailPage', compact('serviceDetail', 'footerMainItems','frequentlyAskedQuestions', 'categories','footerSubMenuItems', 'mainMenuItems'));
+            return view('pages.serviceDetailPage', compact('serviceDetail','services' , 'footerMainItems','frequentlyAskedQuestions', 'categories','footerSubMenuItems', 'mainMenuItems'));
 
         } else {
             return view('pages.homePage');
@@ -139,12 +145,13 @@ class WidgetController extends BaseController
         $menus = new Menu();
         $mServices = new Service();
 
-        $services =  $mServices->getServices(10);
-        $mainMenuItems = $menus->getMenusByName('main_menu');
-        $footerMainItems = $menus->getMainMenuByName('footer_menu');
-        $footerSubMenuItems = $menus->getSubMenuItemsBy('footer_menu');
+        $services           =  $mServices->getServices(10);
+        $subServices        =  $mServices->getSubServices();
+        $mainMenuItems      =  $menus->getMenusByName('main_menu');
+        $footerMainItems    =  $menus->getMainMenuByName('footer_menu');
+        $footerSubMenuItems =  $menus->getSubMenuItemsBy('footer_menu');
 
-        return view('pages.servicesPage', compact('footerMainItems', 'services','mainMenuItems','footerSubMenuItems'));
+        return view('pages.servicesPage', compact('footerMainItems', 'services','mainMenuItems', 'subServices','footerSubMenuItems'));
     }
 
     public function InformationPoolWidgets()

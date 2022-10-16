@@ -14,6 +14,8 @@ Route::get('/hizmetler', 'WidgetController@ServicesPageWidgets');
 Route::get('/iletisim', 'WidgetController@ContactpageWidgets');
 
 
+
+
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

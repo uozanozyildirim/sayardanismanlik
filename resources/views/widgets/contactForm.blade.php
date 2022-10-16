@@ -23,7 +23,7 @@
                             <div class="col-12 col-md-12">
                                 <label class="form-label" for="select-2">{{ translateToEnglish('Size nasıl yardımcı olabiliriz?') }}</label>
                                 <br><input class="form-control" type="text" value="Mesajınız"><br>
-                                {{--                                <select class="form-control" id="select-2">--}}
+{{--                                                                <select class="form-control" id="select-2">--}}
 {{--                                    <option value="default">{{ translateToEnglish('Hizmet Almak istediğiniz konu?') }} </option>--}}
 {{--                                    <option value="s1">{{ translateToEnglish('Çevre - Atık Yönetimi') }}</option>--}}
 {{--                                    <option value="s2">{{ translateToEnglish('Kalite Sistemleri') }}</option>--}}

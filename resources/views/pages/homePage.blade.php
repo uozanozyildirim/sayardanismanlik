@@ -6,7 +6,6 @@
 
 @include('widgets.features')
 
-
 @include('widgets.newsSlider')
 
 {{--@include('widgets.testimonial')--}}

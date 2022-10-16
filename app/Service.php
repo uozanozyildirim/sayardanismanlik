@@ -17,8 +17,17 @@ class Service extends Model
     {
        return  DB::table($this->table)
         ->select('services.*')
-//        ->paginate( $pagination)
+        ->where('parent_id', '=', NULL)
         ->get();
+    }
+
+
+    public function getSubServices()
+    {
+        return  DB::table($this->table)
+            ->select('services.*')
+            ->where('parent_id', '!=', NULL)
+            ->get();
     }
 
 
