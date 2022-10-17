@@ -132,3 +132,15 @@
     </div>
     <!-- End .container-->
 </section>
+
+
+<style>
+
+
+    @media only screen and (max-width: 767px){
+        .accordion {
+            display: none;
+        }
+    }
+
+</style>
