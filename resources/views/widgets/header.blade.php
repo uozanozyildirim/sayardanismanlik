@@ -42,13 +42,13 @@
             <div class="block-right">
                 <!-- Start .social-links-->
                 <div class="social-links">
-                    <a class="share-whatsapp" href="/{{setting('admin.instagram')}}">
+                    <a class="share-whatsapp" href="{{setting('admin.instagram')}}">
                         <img class="energia-facebook" height="32px" src="/images/instagram.png">
                     </a>
-                    <a class="share-instagram" href="/{{setting('admin.whatsapp')}}">
+                    <a class="share-instagram" href="{{setting('admin.whatsapp')}}">
                         <img class="energia-twitter" height="32px" src="/images/whatsapp.png">
                     </a>
-                    <a class="share-instagram" href="/{{setting('admin.youtube')}}">
+                    <a class="share-instagram" href="{{setting('admin.youtube')}}">
                         <img class="energia-twitter" height="32px" src="/images/youtube.png">
                     </a>
                 </div>
