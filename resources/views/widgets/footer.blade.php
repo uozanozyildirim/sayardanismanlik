@@ -49,7 +49,7 @@
                     <div class="footer-copyright">
                         <div class="copyright"><span>{{ translateToEnglish('2022 Svol Danışmanlık. Tüm Hakları Saklıdır')}}</span>
                             <ul class="list-unstyled social-icons">
-                                <li><a class="share-twitter" href="{{setting('admin.twitter')}}">
+                                <li><a class="share-twitter" href="{{setting('admin.instagram')}}">
                                     <img class="energia-twitter m-2" height="32px" src="/images/instagram.png">Instagram</a>
                                 </li>
                                 <li><a class="share-youtube" href="{{setting("admin.whatsapp")}}">
