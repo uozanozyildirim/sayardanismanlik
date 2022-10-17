@@ -49,9 +49,15 @@
                     <div class="footer-copyright">
                         <div class="copyright"><span>{{ translateToEnglish('2022 Svol Danışmanlık. Tüm Hakları Saklıdır')}}</span>
                             <ul class="list-unstyled social-icons">
-                                <li><a class="share-twitter" href="{{setting('admin.twitter')}}"><i class="energia-twitter"></i>twitter</a>
+                                <li><a class="share-twitter" href="{{setting('admin.twitter')}}">
+                                    <img class="energia-twitter m-2" height="32px" src="/images/instagram.png">Instagram</a>
                                 </li>
-                                <li><a class="share-youtube" href="{{setting("admin.youtube")}}"><i class="energia-youtube"></i>youtube</a>
+                                <li><a class="share-youtube" href="{{setting("admin.whatsapp")}}">
+                                    <img class="energia-youtube m-2" height="32px" src="/images/whatsapp.png">Whatsapp</a>
+                                </li>
+
+                                <li><a class="share-youtube" href="{{setting("admin.youtube")}}">
+                                    <img class="energia-youtube m-2" height="32px" src="/images/youtube.png">Youtube</a>
                                 </li>
                             </ul>
                         </div>

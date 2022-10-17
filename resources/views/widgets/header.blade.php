@@ -41,7 +41,17 @@
             </div>
             <div class="block-right">
                 <!-- Start .social-links-->
-                <div class="social-links"><a class="share-whatsapp" href="/{{setting('admin.facebook')}}"><i class="energia-facebook"></i></a><a class="share-instagram" href="/{{setting('admin.instagram')}}"><i class="energia-twitter"></i></a></div>
+                <div class="social-links">
+                    <a class="share-whatsapp" href="/{{setting('admin.instagram')}}">
+                        <img class="energia-facebook" height="32px" src="/images/instagram.png">
+                    </a>
+                    <a class="share-instagram" href="/{{setting('admin.whatsapp')}}">
+                        <img class="energia-twitter" height="32px" src="/images/whatsapp.png">
+                    </a>
+                    <a class="share-instagram" href="/{{setting('admin.youtube')}}">
+                        <img class="energia-twitter" height="32px" src="/images/youtube.png">
+                    </a>
+                </div>
                 <!-- End .social-links-->
                 <div class="topbar-links"><a href="/haberler">{{ translateToEnglish('Haberler') }}</a></div>
                 <div class="module module-language">
