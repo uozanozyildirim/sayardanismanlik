@@ -4694,6 +4694,15 @@ ul.dropdown-menu>li.has-dropdown>a:before {
 	}
 }
 
+.social-image {
+    filter: grayscale(50%)
+
+}
+.social-image:hover
+{
+    filter:grayscale(0);
+}
+
 .top-bar .social-links a {
 	margin-right      : 10px;
 	color             : var(--global--color-primary);

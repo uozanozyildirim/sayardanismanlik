@@ -21,40 +21,18 @@
                         <div class="row">
 
                             <div class="col-12 col-md-12">
-                                <label class="form-label" for="select-2">{{ translateToEnglish('Size nasıl yardımcı olabiliriz?') }}</label>
-                                <br><input class="form-control" type="text" value="Mesajınız"><br>
-{{--                                    <select class="form-control" id="select-2">--}}
-{{--                                    <option value="default">{{ translateToEnglish('Hizmet Almak istediğiniz konu?') }} </option>--}}
-{{--                                    <option value="s1">{{ translateToEnglish('Çevre - Atık Yönetimi') }}</option>--}}
-{{--                                    <option value="s2">{{ translateToEnglish('Kalite Sistemleri') }}</option>--}}
-{{--                                    <option value="s3">{{ translateToEnglish('Kimyasalların Kaydı - GBT')}}</option>--}}
-{{--                                    <option value="s4">{{ translateToEnglish('Sosyal Uygunluk Danışmanlığı') }} </option>--}}
-{{--                                    <option value="s5">{{ translateToEnglish('Enerji Yönetimi')  }} </option>--}}
-{{--                                    <option value="s6">{{ translateToEnglish('İş Güvenliği')  }}</option>--}}
-{{--                                    <option value="s7">{{ translateToEnglish('Eğitim') }} </option>--}}
-{{--                                    <option value="s8">{{ translateToEnglish('Karbon Ayak İzi')}}</option>--}}
-{{--                                    </select>--}}
+                                <label class="form-label" for="select-2">{{ translateToEnglish('Size nasıl yardımcı olabiliriz? *') }}</label>
+                                <br><input class="form-control" type="textbox" placeholder="Mesajınız" required><br>
                             </div>
-{{--                            <div class="col-12">--}}
-{{--                                <label class="form-label">{{ translateToEnglish('İletişim kanalı seçimi:') }} </label>--}}
-{{--                                <div class="custom-radio-group" id="custom-radio-group">--}}
-{{--                                    <div class="custom-control">--}}
-{{--                                        <input class="custom-control-input" type="radio" id="customRadioInline1"--}}
-{{--                                               name="customRadioInline1"/>--}}
-{{--                                        <label for="customRadioInline1">{{ translateToEnglish('Tümü') }}</label>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="custom-control">--}}
-{{--                                        <input class="custom-control-input" type="radio" id="customRadioInline2"--}}
-{{--                                               name="customRadioInline1"/>--}}
-{{--                                        <label for="customRadioInline2">{{ translateToEnglish('email')}}</label>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="custom-control">--}}
-{{--                                        <input class="custom-control-input" type="radio" id="customRadioInline3"--}}
-{{--                                               name="customRadioInline1"/>--}}
-{{--                                        <label for="customRadioInline3">{{ translateToEnglish('telefon')}}</label>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="select-2">{{ translateToEnglish('Email Adresiniz?') }}</label>
+                                <br><input class="form-control" type="email" placeholder="Email"><br>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label" for="select-2">{{ translateToEnglish('Telefon Numaranız?*') }}</label>
+                                <br><input class="form-control" type="tel" placeholder="Telefon" required><br>
+                            </div>
+
                             <div class="col-12">
                                 <button class="btn btn--secondary w-100">{{ translateToEnglish('Gönder') }} <i
                                         class="energia-arrow-right"></i></button>

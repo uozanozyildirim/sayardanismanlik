@@ -169,4 +169,6 @@ class WidgetController extends BaseController
         return view('pages.informationPoolPage', compact('footerMainItems','mainMenuItems', 'frequentlyAskedQuestions','footerSubMenuItems'));
     }
 
+
+
 }

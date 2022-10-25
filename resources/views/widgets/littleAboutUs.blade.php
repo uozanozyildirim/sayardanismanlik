@@ -4,7 +4,7 @@
             <div class="col-12 col-lg-5">
                 <div class="about-img">
                     <div class="about-img-holder bg-overlay">
-                        <div class="bg-section"><img src="/images/about/1.jpg" alt="about Image"/></div>
+                        <div class="bg-section"><img src="{{ $solResimSagYazi['image'] }}" alt="about Image"/></div>
                     </div>
                 </div>
             </div>

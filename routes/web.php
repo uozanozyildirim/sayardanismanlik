@@ -13,6 +13,8 @@ Route::get('/bilgi-havuzu', 'WidgetController@InformationPoolWidgets');
 Route::get('/hizmetler', 'WidgetController@ServicesPageWidgets');
 Route::get('/iletisim', 'WidgetController@ContactpageWidgets');
 
+Route::get('/kisisel-bilgileri-koruma-kanunu', 'StaticPageController@kvvkPage');
+Route::get('/cerez-kullanim-sozlesmesi', 'StaticPageController@cookiePage');
 
 
 
