@@ -13,14 +13,18 @@
             <div class="col-12 col-lg-7">
                 <div class="heading heading-1">
                 <p class="heading-subtitle heading-subtitle-bg">{{ translateToEnglish($solResimSagYazi['kucukYazi'])   }}</p>
-                    <h2 class="heading-title">{{  translateToEnglish($solResimSagYazi['baslik'])  }}</h2>
+                    <h2 class="heading-title">Sürdürülebilir Çevre, <br>
+                        Sürdürülebilir Enerji, <br>
+                        Yeşil Mutabakat</h2>
                 </div>
-                <div class="about-block">
+                <div class="about-block" style="text-align: justify;">
                     <div class="row">
                         <div class="col-12 col-lg-12">
                             <div class="block-left">
-                                <p class="paragraph">{{ translateToEnglish($solResimSagYazi['solBaslik'])  }}</p>
-                                <p> {{  translateToEnglish($solResimSagYazi['solAciklama'])  }} </p><a href="/hizmetler" class="btn btn--secondary">{{ translateToEnglish('Devamı')}} <i class="energia-arrow-right"></i></a>
+                                <p class="paragraph" style="text-align: justify-all;">{{ translateToEnglish($solResimSagYazi['solBaslik'])  }}</p>
+                                <p style="text-align: justify;"> {{  translateToEnglish($solResimSagYazi['solAciklama'])  }} </p>
+                                <a href="/hizmetler" class="btn btn--secondary">{{ translateToEnglish('Devamı')}} <i class="energia-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
 {{--                        <div class="col-12 col-lg-5">--}}

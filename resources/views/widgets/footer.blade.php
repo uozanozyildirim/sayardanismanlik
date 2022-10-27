@@ -84,8 +84,8 @@
 <script src="/js/vendor.js"></script>
 <script src="/js/functions.js"></script>
 
-<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-43aff1db-2275-4aa9-af14-59ecb575f9b9"></div>
+{{--<script src="https://apps.elfsight.com/p/platform.js" defer></script>--}}
+{{--<div class="elfsight-app-43aff1db-2275-4aa9-af14-59ecb575f9b9"></div>--}}
 
 <script>
 

@@ -115,14 +115,12 @@ class WidgetController extends BaseController
             $widget = new Service();
             $faqs = new FrequentlyAskedQuestion();
 
-            $services = $widget->getServices();
-            $subServices = $widget->getSubServices();
-            $services = array_merge(json_decode($services), json_decode($subServices));
 
             $serviceDetail = $widget->getServiceBySlug($slug);
+            $subServices =  $widget->getSubServicesByParent($slug);
             $frequentlyAskedQuestions = $faqs->getItemsByServiceSlug($slug);
 
-            return view('pages.serviceDetailPage', compact('serviceDetail','services' , 'footerMainItems','frequentlyAskedQuestions', 'categories','footerSubMenuItems', 'mainMenuItems'));
+            return view('pages.serviceDetailPage', compact('serviceDetail' , 'footerMainItems',"subServices",'frequentlyAskedQuestions', 'categories','footerSubMenuItems', 'mainMenuItems'));
 
         } else {
             return view('pages.homePage');

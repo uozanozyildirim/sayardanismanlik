@@ -17906,6 +17906,8 @@ ul.dropdown-menu>li.has-dropdown>a:before {
 @media screen and (max-width: 991.98px) {
 	.about .about-block .block-left {
 		margin-bottom: 40px;
+        justify-content: center;
+        text-align: justify;
 	}
 }
 

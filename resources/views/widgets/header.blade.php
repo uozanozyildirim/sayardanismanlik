@@ -6,7 +6,7 @@
     <meta name="author" content="Svol Danışmanlık"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>{{setting('admin.site_title')}}</title>
-    <link href="/storage/{{ setting('admin.site_favicon')  }}" rel="icon"/>
+    <link href="{{ env('APP_URL') }}/storage/{{ setting('admin.site_favicon')  }}" rel="icon"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -65,8 +65,8 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-sticky" id="primary-menu"><a class="navbar-brand" href="/">
-                <img class="logo logo-dark"  src="/storage/{{setting("admin.site_logo")}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/>
-            <img style="height: 90px;"  class="logo logo-mobile" src="/storage/{{setting('admin.site_logo')}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/></a>
+                <img class="logo logo-dark"  src="{{ env('APP_URL') }}/storage/{{setting("admin.site_logo")}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/>
+            <img style="height: 90px;"  class="logo logo-mobile" src="{{ env('APP_URL') }}/storage/{{setting('admin.site_logo')}}" alt="{{ translateToEnglish("Svol Danismanlik")}}"/></a>
             <div class="module-holder module-holder-phone">
                 <div class="module module-search">
                     <div class="module-icon module-icon-search"><i class="energia-search-Icon"></i></div>

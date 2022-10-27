@@ -4,15 +4,18 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4 order-1">
+
                 <div class="sidebar sidebar-service">
                     <!-- Services-->
+                  @if(empty($subServices) === false)
+
                     <div class="widget widget-services">
                         <div class="widget-title">
                             <h5>{{ translateToEnglish('Hizmet Kategorilerimiz')}}</h5>
                         </div>
                         <div class="widget-content">
                             <ul class="list-unstyled">
-                                @foreach($services as $service)
+                                @foreach($subServices as $service)
                                 <li><a href="/hizmet/{{ $service->slug }}"> <span>{{ $service->title }}</span><i class="energia-arrow-right"></i></a></li>
                                 @endforeach
                             </ul>
@@ -20,6 +23,7 @@
                     </div>
                     <!-- End .widget-services -->
                     <!-- Reservation-->
+                  @endif
 
 
                     <div class="widget widget-reservation"><img src="/images/blog/sidebar/reservation.jpg" alt="img"/>
@@ -45,42 +49,8 @@
                             </div>
                         </div>
 
+                      @include('widgets.faqByService')
 
-{{--                        <div class="entry-video entry-infos">--}}
-{{--                            <h5 class="entry-heading">how it works?!</h5>--}}
-{{--                            <p class="entry-desc">It has been argued that expanding use of wind power will lead to increasing geopolitical competition over critical materials for wind turbines such as rare earth elements neodymium, praseodymium, and dysprosium. But this perspective has been criticised for failing to recognise that most wind turbines.</p>--}}
-{{--                            <!----}}
-{{--                            ============================--}}
-{{--                            Video #3 Section--}}
-{{--                            ============================--}}
-{{--                            -->--}}
-{{--                            <div class="video video-3" id="video-3">--}}
-{{--                                <div class="bg-section"><img src="/images/video/3.jpg" alt="background"/></div><a class="popup-video btn-video btn-video-2" href="https://www.youtube.com/watch?v=nrJtHemSPW4"> <i class="fas fa-play"></i></a>--}}
-{{--                                <!-- End .popup-video-->--}}
-{{--                            </div>--}}
-{{--                            <!-- End .video-->--}}
-{{--                        </div>--}}
-
-
-                        @if(($frequentlyAskedQuestions))
-                        <div class="entry-benefits entry-infos">
-                            <h5 class="entry-heading">{{ translateToEnglish('Sık Sorulan Sorular')}}</h5>
-                            <div class="accordion accordion-2" id="accordion03">
-                                <div class="row">
-                                   @foreach($frequentlyAskedQuestions as $faq)
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-heading"><a class="card-link collapsed" data-hover="" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapse01-{{ $faq->id }}" href="#collapse01-{{ $faq->id }}">{{ $faq->title }}</a></div>
-                                            <div class="collapse" id="collapse01-{{ $faq->id }}" data-bs-parent="#accordion03">
-                                                <div class="card-body">{{ $faq->content }}</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endforeach
-                                </div>
-                            </div>
-                        </div>
-                        @endif
                     </div>
                 </div>
                 <!-- End .service-entry-->

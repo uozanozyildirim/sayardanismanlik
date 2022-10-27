@@ -9,7 +9,7 @@
                     <div class="member-content">
 
                         <div class="member-info"><a href="javascript:void(0)">{{ $ikiResimIkiYazi['kisiIsimBir'] }}</a>
-                            <h6 style="line-height: 30px;">
+                            <h6 style="line-height: 30px; text-align: justify;">
                                 {{ translateToEnglish('Sayar, Lisans derecesini 2008 yılında Sakarya Üniversitesi Çevre Mühendisliği alanında almış aynı yıl atık yönetimi üzerine çalışmaya başlamıştır. 2012 yılında içerisinden 2 ulusal ve 1 uluslararası bildirinin yayınlandığı; kongrelerde bildiri sunumlarını bizzat yaptığı yüksek lisans tezini tamamlamıştır.
 
                                 2008 yılından bu yana entegre atık yönetimi üzerine çalışmakta olup; bu alanda 2013 yılında Anel Doğa Entegre Geri Dönüşüm Endüstri A.Ş.’de belgelendirme ve proje yönetimi uzmanı olarak Türkiyenin ilk elektrikli ve elektronik atık işleme lisansı ile birlikte 7 ayrı faaliyet konusunu (AEEE, ÖTA, ATY, ARA DEPOLAMA, TEHLİKELİ-TEHLİKESİZ ATIK GERİ KAZANIM, HURDA METAL İŞLEME) ilk ve tek seferde alınmasını sağlamış bu alanda çalışmaları bizzat yürütmüştür. Aynı yıllarda TAYÇED kuruluşunda teknik komite üyesi olarak bulunmuştur.
@@ -44,7 +44,7 @@
                     <!-- End .member-img-->
                     <div class="member-content">
                         <div class="member-info"><a href="javascript:void(0)">{{ $ikiResimIkiYazi['kisiIsimIki'] }}</a>
-                            <h6 style="line-height: 30px;"> {{  translateToEnglish('Beyza Nur Sayar Bıdı 2017 yılında Sakarya Üniversitesi Mühendislik fakültesinden mezun olduktan sonra  Tehlikeli Madde Güvenlik Danışmanı olarak çalışmaya başlamıştır. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı ile Ulaştırma ve Altyapı Bakanlığını’nın yayınlamış olduğumu mevzuatlarda çeşitli çalışmalar yapmış ve eğitimler almış olup; Atık Yönetimi, Karbon Ayakizi Hesaplama, Kimyasal Değerlendirme (ön kayıt) ve Güvenlik Bilgi Formu inceleme hususlarında geniş bilgi sahibi olmuştur.
+                            <h6 style="line-height: 30px; text-align: justify;"> {{  translateToEnglish('Beyza Nur Sayar Bıdı 2017 yılında Sakarya Üniversitesi Mühendislik fakültesinden mezun olduktan sonra  Tehlikeli Madde Güvenlik Danışmanı olarak çalışmaya başlamıştır. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı ile Ulaştırma ve Altyapı Bakanlığını’nın yayınlamış olduğumu mevzuatlarda çeşitli çalışmalar yapmış ve eğitimler almış olup; Atık Yönetimi, Karbon Ayakizi Hesaplama, Kimyasal Değerlendirme (ön kayıt) ve Güvenlik Bilgi Formu inceleme hususlarında geniş bilgi sahibi olmuştur.
 
                                 2022 yılında İstanbuk Teknik Üniversitesi’nden Kalite Yöneticiliği Uzmanlık sertifikası ile birlikte iç tetkik eğitimlerini alarak bu alanda çalışmalara başlamıştır. Sayar Bıdı aynı zamanda Sosyal Uygunluk üzerine de eğitimler alıp çalışmalarına devam etmektedir.
                             ') }}

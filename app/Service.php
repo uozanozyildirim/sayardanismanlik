@@ -22,13 +22,31 @@ class Service extends Model
     }
 
 
-    public function getSubServices()
+    public function getSubServicesByParent($parentServiceSlug)
     {
+        $parentServiceId = DB::table($this->table)
+            ->select('services.id')
+            ->where('slug', '=', $parentServiceSlug)
+            ->first();
+
+        $parentServiceId = $parentServiceId->id;
+
         return  DB::table($this->table)
-            ->select('services.*')
-            ->where('parent_id', '!=', NULL)
+            ->select('*')
+            ->where('parent_id', '=', $parentServiceId)
             ->get();
     }
+
+
+    public function getSubServices()
+    {
+
+        return  DB::table($this->table)
+            ->select('services.*')
+            ->where('services.parent_id', '=!', NULL)
+            ->get();
+    }
+
 
 
     public function getServiceBySlug($slug)
@@ -40,5 +58,6 @@ class Service extends Model
             ->first();
 
     }
+
 
 }
