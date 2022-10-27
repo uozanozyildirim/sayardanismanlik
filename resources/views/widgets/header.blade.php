@@ -44,13 +44,10 @@
 
                 <div class="social-links">
                     <a class="share-whatsapp" href="{{setting('admin.instagram')}}">
-                        <img class="energia-facebook social-image"  height="32px" src="/images/instagram.png">
-                    </a>
-                    <a class="share-instagram" href="{{setting('admin.whatsapp')}}">
-                        <img class="energia-twitter social-image"  height="32px" src="/images/whatsapp.png">
+                        <img class="energia-facebook social-image"  height="22px" src="/images/instagram.png">
                     </a>
                     <a class="share-instagram" href="{{setting('admin.youtube')}}">
-                        <img class="energia-twitter social-image" height="32px" src="/images/youtube.png">
+                        <img class="energia-twitter social-image" height="22px" src="/images/youtube.png">
                     </a>
                 </div>
                 <!-- End .social-links-->

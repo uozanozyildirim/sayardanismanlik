@@ -53,7 +53,7 @@
                                     <img class="energia-twitter m-2" height="32px" src="/images/instagram.png">Instagram</a>
                                 </li>
                                 <li><a class="share-youtube" href="{{setting("admin.whatsapp")}}">
-                                    <img class="energia-youtube m-2" height="32px" src="/images/whatsapp.png">Whatsapp</a>
+                                    <img class="energia-youtube m-2" height="32px" style="  border-radius: 20%;" src="/images/whatsapp.png">Whatsapp</a>
                                 </li>
 
                                 <li><a class="share-youtube" href="{{setting("admin.youtube")}}">
@@ -84,6 +84,8 @@
 <script src="/js/vendor.js"></script>
 <script src="/js/functions.js"></script>
 
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-43aff1db-2275-4aa9-af14-59ecb575f9b9"></div>
 
 <script>
 
