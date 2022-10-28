@@ -1,4 +1,4 @@
-@if(isset($frequentlyAskedQuestions) === 1)
+@if(isset($frequentlyAskedQuestions) === true)
     <div class="entry-benefits entry-infos">
         <h5 class="entry-heading">{{ translateToEnglish('Sık Sorulan Sorular')}}</h5>
         <div class="accordion accordion-2" id="accordion03">
